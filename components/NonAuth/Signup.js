@@ -1,13 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { Text, ScrollView, View, Image, TextInput, TouchableOpacity } from 'react-native';
-import { styles } from './styles';
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import styles from './styles';
 
-export default function Signup({ navigation }) {
+export default function Signup() {
   const placeholderTextColor = '#8C8C8C';
+  const { navigate } = useNavigation();
 
   const onSignIn = () => {
-    navigation.navigate('Login');
+    navigate('Login');
   };
   return (
     <ScrollView style={{ backgroundColor: 'white' }}>
@@ -29,13 +30,13 @@ export default function Signup({ navigation }) {
           placeholderTextColor={placeholderTextColor}
           style={styles.inputContainer}
           autoCorrect={false}
-          keyboardType={'phone-pad'}
+          keyboardType="phone-pad"
         />
         <TextInput
           placeholder="E-mail"
           placeholderTextColor={placeholderTextColor}
           style={styles.inputContainer}
-          keyboardType={'email-address'}
+          keyboardType="email-address"
           autoCorrect={false}
           autoCapitalize="none"
         />
@@ -45,7 +46,7 @@ export default function Signup({ navigation }) {
           style={styles.inputContainer}
           autoCorrect={false}
           autoCapitalize="none"
-          secureTextEntry={true}
+          secureTextEntry
         />
         <TextInput
           placeholder="Confirmer mot de passe"
@@ -53,13 +54,13 @@ export default function Signup({ navigation }) {
           style={styles.inputContainer}
           autoCorrect={false}
           autoCapitalize="none"
-          secureTextEntry={true}
+          secureTextEntry
         />
         <TouchableOpacity style={{ marginVertical: 20 }} onPress={onSignIn}>
           <Text style={styles.text}>Déjà enregistré(e) ?</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.text}>S'inscrire</Text>
+          <Text style={styles.text}>S&apos;inscrire</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

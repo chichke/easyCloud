@@ -1,22 +1,25 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Text, View, ScrollView, Image, TextInput, TouchableOpacity } from 'react-native';
-import { styles } from './styles';
+import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import styles from './styles';
 
-export default function Signin({ navigation }) {
+const logo = require('../../assets/easyCloud.png');
+
+export default function Signin() {
   const placeholderTextColor = '#8C8C8C';
-
+  const { navigate } = useNavigation();
   const onSignUp = () => {
-    navigation.navigate('Signup');
+    navigate('Signup');
   };
   return (
     <ScrollView style={{ backgroundColor: 'white' }}>
       <View style={styles.container}>
-        <Image source={require('../../assets/easyCloud.png')} style={styles.image} />
+        <Image source={logo} style={styles.image} />
         <TextInput
           placeholder="E-mail"
           placeholderTextColor={placeholderTextColor}
           style={styles.inputContainer}
-          keyboardType={'email-address'}
+          keyboardType="email-address"
           autoCorrect={false}
           autoCapitalize="none"
         />
@@ -26,7 +29,7 @@ export default function Signin({ navigation }) {
           style={styles.inputContainer}
           autoCorrect={false}
           autoCapitalize="none"
-          secureTextEntry={true}
+          secureTextEntry
         />
         <TouchableOpacity style={styles.button}>
           <Text style={styles.text}>Connexion</Text>
