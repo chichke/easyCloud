@@ -15,7 +15,7 @@ import {
   showSettingsIcon,
   showSignupIcon,
 } from './components/TabBarIcon';
-import firebase from './firebase/config';
+import firebase from './firebase';
 
 const Tab = createBottomTabNavigator();
 

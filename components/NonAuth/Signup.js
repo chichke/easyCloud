@@ -1,9 +1,15 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import styles from './styles';
 
 export default function Signup() {
+  const [first, setFirst] = useState('');
+  const [last, setLast] = useState('');
+  const [phone, setPhone] = useState('');
+  const [mail, setMail] = useState('');
+  const [pass, setPass] = useState('');
+  const [confirm, setConfirm] = useState('');
   const placeholderTextColor = '#8C8C8C';
   const { navigate } = useNavigation();
 
@@ -18,12 +24,16 @@ export default function Signup() {
           placeholderTextColor={placeholderTextColor}
           style={styles.inputContainer}
           autoCorrect={false}
+          onChangeText={setFirst}
+          value={first}
         />
         <TextInput
           placeholder="Nom"
           placeholderTextColor={placeholderTextColor}
           style={styles.inputContainer}
           autoCorrect={false}
+          onChangeText={setLast}
+          value={last}
         />
         <TextInput
           placeholder="Téléphone"
@@ -31,6 +41,8 @@ export default function Signup() {
           style={styles.inputContainer}
           autoCorrect={false}
           keyboardType="phone-pad"
+          onChangeText={setPhone}
+          value={phone}
         />
         <TextInput
           placeholder="E-mail"
@@ -39,6 +51,8 @@ export default function Signup() {
           keyboardType="email-address"
           autoCorrect={false}
           autoCapitalize="none"
+          onChangeText={setMail}
+          value={mail}
         />
         <TextInput
           placeholder="Mot de passe"
@@ -47,6 +61,8 @@ export default function Signup() {
           autoCorrect={false}
           autoCapitalize="none"
           secureTextEntry
+          onChangeText={setPass}
+          value={pass}
         />
         <TextInput
           placeholder="Confirmer mot de passe"
@@ -55,6 +71,8 @@ export default function Signup() {
           autoCorrect={false}
           autoCapitalize="none"
           secureTextEntry
+          onChangeText={setConfirm}
+          value={confirm}
         />
         <TouchableOpacity style={{ marginVertical: 20 }} onPress={onSignIn}>
           <Text style={styles.text}>Déjà enregistré(e) ?</Text>
