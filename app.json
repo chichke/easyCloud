@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "APP_NAME",
-    "slug": "APP_NAME",
+    "name": "EASY_CLOUD",
+    "slug": "EASY_CLOUD",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/easy-cloud.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/easy-cloud.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
