@@ -1,9 +1,15 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { useToast } from 'react-native-fast-toast';
+import createAccount from '../../helpers/createAccount';
+import Loading from '../Loading';
+import schema from './Schema';
 import styles from './styles';
 
 export default function Signup() {
+  const toast = useToast();
+  const [loading, setLoading] = useState(false);
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
   const [phone, setPhone] = useState('');
@@ -13,9 +19,49 @@ export default function Signup() {
   const placeholderTextColor = '#8C8C8C';
   const { navigate } = useNavigation();
 
-  const onSignIn = () => {
+  const onSignin = () => {
     navigate('Login');
   };
+
+  const createAcc = (formData) => {
+    createAccount(formData)
+      .then(() => {
+        toast.show('Successfully created your account!', { type: 'success' });
+      })
+      .catch((err) => {
+        toast.show(err.message, { type: 'danger' });
+        setLoading(false);
+      });
+  };
+  const onSignup = () => {
+    const formData = {
+      first,
+      last,
+      phone,
+      mail,
+      pass,
+      confirm,
+    };
+
+    if (!first || !last || !phone || !mail || !pass || !confirm)
+      toast.show('One of the field is empty!', { type: 'danger' });
+    else
+      schema
+        .validate(formData)
+        .then(() => {
+          setLoading(true);
+          createAcc(formData);
+        })
+        .catch((err) => {
+          err.errors.forEach((e) => {
+            toast.show(e, { type: 'danger' });
+          });
+          setLoading(false);
+        });
+  };
+
+  if (loading) return <Loading />;
+
   return (
     <ScrollView style={{ backgroundColor: 'white' }}>
       <View style={{ ...styles.container, marginTop: 60 }}>
@@ -74,10 +120,10 @@ export default function Signup() {
           onChangeText={setConfirm}
           value={confirm}
         />
-        <TouchableOpacity style={{ marginVertical: 20 }} onPress={onSignIn}>
+        <TouchableOpacity style={{ marginVertical: 20 }} onPress={onSignin}>
           <Text style={styles.text}>Déjà enregistré(e) ?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={onSignup}>
           <Text style={styles.text}>S&apos;inscrire</Text>
         </TouchableOpacity>
       </View>

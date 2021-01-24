@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
+import { ToastProvider } from 'react-native-fast-toast';
 import 'react-native-gesture-handler';
 import Home from './components/Auth/Home';
 import ScoreBoard from './components/Auth/ScoreBoard';
@@ -40,7 +41,11 @@ export default function App() {
     return <SplashScreen />;
   }
 
-  return <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>;
+  return (
+    <ToastProvider>
+      <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>
+    </ToastProvider>
+  );
 }
 
 export const AuthStack = () => (
