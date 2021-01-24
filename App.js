@@ -3,24 +3,27 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { ToastProvider } from 'react-native-fast-toast';
 import 'react-native-gesture-handler';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import Home from './components/Auth/Home/Home';
+import Profile from './components/Auth/Profile/Profile';
 import ScoreBoard from './components/Auth/ScoreBoard';
 import Settings from './components/Auth/Settings';
-import Profile from './components/Auth/Profile/Profile';
 import Signin from './components/NonAuth/Signin';
 import Signup from './components/NonAuth/Signup';
 import SplashScreen from './components/SplashScreen';
 import {
   showHomeIcon,
   showLoginIcon,
+  showProfileIcon,
   showScoreBoardIcon,
   showSettingsIcon,
   showSignupIcon,
-  showProfileIcon,
 } from './components/TabBarIcon';
 import firebase from './firebase';
 
 const Tab = createBottomTabNavigator();
+
+const queryClient = new QueryClient();
 
 export default function App() {
   const [initializing, setInitializing] = useState(true);
@@ -44,9 +47,11 @@ export default function App() {
   }
 
   return (
-    <ToastProvider>
-      <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>
-    </ToastProvider>
+    <QueryClientProvider client={queryClient}>
+      <ToastProvider>
+        <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>
+      </ToastProvider>
+    </QueryClientProvider>
   );
 }
 
