@@ -5,7 +5,7 @@ import { useToast } from 'react-native-fast-toast';
 import firebase from '../../firebase';
 import styles from './styles';
 
-const logo = require('../../assets/easyCloud.png');
+const logo = require('../../assets/easy-cloud.png');
 
 export default function Signin() {
   const toast = useToast();
