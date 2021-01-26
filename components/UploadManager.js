@@ -1,5 +1,5 @@
 import Feather from '@expo/vector-icons/Feather';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,7 +19,30 @@ function UploadManager() {
   const [progress, setProgress] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   let unsubscribe;
+
   const dispatch = useDispatch();
+
+  const handlePlayPause = () => {
+    if (isRunning) {
+      uploadTask.pause();
+      toast.show('Upload paused');
+    } else {
+      uploadTask.resume();
+      toast.show('Upload resumed');
+    }
+  };
+
+  const handleCancel = async () => {
+    try {
+      await uploadTask.cancel();
+      if (unsubscribe) unsubscribe();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      toast.show('Upload cancelled');
+    }
+  };
+
   const handleSnapshot = (snapshot) => {
     // Observe state change events such as progress, pause, and resume
     // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
@@ -48,7 +71,7 @@ function UploadManager() {
       .getDownloadURL()
       .then((downloadURL) => {
         console.log('File available at', downloadURL);
-        toast.show('Upload successfuly', { type: 'success' });
+        toast.show('Upload successful', { type: 'success' });
         // TODO Add url data to firebase realtime DB
       })
       .catch((err) => console.log(err))
@@ -58,30 +81,13 @@ function UploadManager() {
       });
   };
 
-  const handlePlayPause = () => {
-    if (isRunning) {
-      uploadTask.pause();
-      toast.show('Upload paused');
-    } else {
-      uploadTask.resume();
-      toast.show('Upload resumed');
-    }
-  };
-
-  const handleCancel = async () => {
-    try {
-      await uploadTask.cancel();
-      if (unsubscribe) unsubscribe();
-    } catch (error) {
-      console.log(error);
-    } finally {
-      toast.show('Upload cancelled');
-    }
-  };
+  useEffect(() => {
+    if (!uploadTask) return;
+    console.log('.on');
+    unsubscribe = uploadTask.on('state_changed', handleSnapshot, handleError, handleFinally);
+  }, [uploadTask]);
 
   if (!uploadTask) return null;
-
-  unsubscribe = uploadTask.on('state_changed', handleSnapshot, handleError, handleFinally);
 
   return (
     <View style={styles.container}>
