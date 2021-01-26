@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { ToastProvider } from 'react-native-fast-toast';
 import 'react-native-gesture-handler';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { Provider } from 'react-redux';
 import Home from './components/Auth/Home/Home';
 import Profile from './components/Auth/Profile/Profile';
 import ScoreBoard from './components/Auth/ScoreBoard';
@@ -19,7 +20,9 @@ import {
   showSettingsIcon,
   showSignupIcon,
 } from './components/TabBarIcon';
+import UploadManager from './components/UploadManager';
 import firebase from './firebase';
+import store from './redux/store';
 
 const Tab = createBottomTabNavigator();
 
@@ -47,25 +50,30 @@ export default function App() {
   }
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <ToastProvider>
-        <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>
-      </ToastProvider>
-    </QueryClientProvider>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <ToastProvider>
+          <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>
+        </ToastProvider>
+      </QueryClientProvider>
+    </Provider>
   );
 }
 
 export const AuthStack = () => (
-  <Tab.Navigator initialRouteName="Home" lazy={false}>
-    <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: showHomeIcon }} />
-    <Tab.Screen
-      name="ScoreBoard"
-      component={ScoreBoard}
-      options={{ tabBarIcon: showScoreBoardIcon }}
-    />
-    <Tab.Screen name="Settings" component={Settings} options={{ tabBarIcon: showSettingsIcon }} />
-    <Tab.Screen name="Profile" component={Profile} options={{ tabBarIcon: showProfileIcon }} />
-  </Tab.Navigator>
+  <>
+    <Tab.Navigator initialRouteName="Home" lazy={false}>
+      <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: showHomeIcon }} />
+      <Tab.Screen
+        name="ScoreBoard"
+        component={ScoreBoard}
+        options={{ tabBarIcon: showScoreBoardIcon }}
+      />
+      <Tab.Screen name="Settings" component={Settings} options={{ tabBarIcon: showSettingsIcon }} />
+      <Tab.Screen name="Profile" component={Profile} options={{ tabBarIcon: showProfileIcon }} />
+    </Tab.Navigator>
+    <UploadManager />
+  </>
 );
 
 export const NonAuthStack = () => (
