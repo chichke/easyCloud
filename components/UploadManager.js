@@ -2,8 +2,10 @@ import Feather from '@expo/vector-icons/Feather';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
+import { useQueryClient } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import firebase from '../firebase';
+import { addDownloadUrl } from '../helpers/firebase';
 import { finish } from '../redux/actions/uploadManager';
 
 const styles = StyleSheet.create({
@@ -15,6 +17,7 @@ const styles = StyleSheet.create({
 
 function UploadManager() {
   const uploadTask = useSelector((state) => state.uploadManager.uploadTask);
+  const queryClient = useQueryClient();
   const toast = useToast();
   const [progress, setProgress] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
@@ -36,10 +39,11 @@ function UploadManager() {
     try {
       if (!isRunning) await uploadTask.resume();
       await uploadTask.cancel();
-      if (unsubscribe) unsubscribe();
     } catch (error) {
       console.log(error);
     } finally {
+      if (unsubscribe) unsubscribe();
+
       toast.show('Upload cancelled');
     }
   };
@@ -71,7 +75,9 @@ function UploadManager() {
     uploadTask.snapshot.ref
       .getDownloadURL()
       .then((downloadURL) => {
+        addDownloadUrl(downloadURL);
         console.log('File available at', downloadURL);
+        queryClient.invalidateQueries('getFiles');
         toast.show('Upload successful', { type: 'success' });
         // TODO Add url data to firebase realtime DB
       })

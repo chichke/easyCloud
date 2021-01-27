@@ -1,10 +1,15 @@
 import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
-import { SafeAreaView, Text, TouchableOpacity } from 'react-native';
+import { FlatList, SafeAreaView, Text, TouchableOpacity } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
+import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
+import { getFiles } from '../../../helpers/firebase';
 import { setFile } from '../../../redux/actions/uploadManager';
+import Error from '../../Error';
+import Loading from '../../Loading';
+import FileItem from './FileItem';
 
 export default function Home() {
   const uploading = useSelector((state) => state.uploadManager.uploading);
@@ -52,6 +57,15 @@ export default function Home() {
     }
   };
 
+  const query = useQuery('getFiles', getFiles);
+
+  const { isLoading, isError, data, error } = query;
+
+  if (isLoading) return <Loading />;
+
+  if (isError) return <Error error={error} />;
+
+  // console.log(data.length);
   return (
     <SafeAreaView>
       <TouchableOpacity onPress={pickImage} disabled={uploading}>
@@ -60,6 +74,11 @@ export default function Home() {
       <TouchableOpacity onPress={pickFile} disabled={uploading}>
         <Text>File</Text>
       </TouchableOpacity>
+      <FlatList
+        data={data}
+        renderItem={({ item }) => <FileItem item={item} />}
+        keyExtractor={(item, index) => String(index)}
+      />
     </SafeAreaView>
   );
 }

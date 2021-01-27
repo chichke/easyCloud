@@ -50,13 +50,13 @@ export default function App() {
   }
 
   return (
-    <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
-        <ToastProvider>
+    <ToastProvider>
+      <Provider store={store}>
+        <QueryClientProvider client={queryClient}>
           <NavigationContainer>{user ? <AuthStack /> : <NonAuthStack />}</NavigationContainer>
-        </ToastProvider>
-      </QueryClientProvider>
-    </Provider>
+        </QueryClientProvider>
+      </Provider>
+    </ToastProvider>
   );
 }
 

@@ -5,7 +5,7 @@ import { Image, Platform, Text, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { useQuery } from 'react-query';
 import firebase from '../../../firebase';
-import selfData from '../../../helpers/selfData';
+import { selfData } from '../../../helpers/firebase';
 import Button from '../../ButtonWithText';
 import Error from '../../Error';
 import Loading from '../../Loading';

@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
-import createAccount from '../../helpers/createAccount';
+import { createAccount } from '../../helpers/firebase';
 import Loading from '../Loading';
 import schema from './Schema';
 import styles from './styles';
