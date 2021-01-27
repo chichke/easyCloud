@@ -34,6 +34,7 @@ function UploadManager() {
 
   const handleCancel = async () => {
     try {
+      if (!isRunning) await uploadTask.resume();
       await uploadTask.cancel();
       if (unsubscribe) unsubscribe();
     } catch (error) {
