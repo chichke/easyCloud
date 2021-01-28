@@ -1,7 +1,7 @@
 import firebase from '../../firebase';
 import { END_UPLOAD, START_UPLOAD } from '../types/uploadManager';
 
-export const setFile = (blob) => (dispatch) => {
+export const setFile = (blob, isPP = false) => (dispatch) => {
   const { uid } = firebase.auth().currentUser;
 
   const name = `${new Date().getTime()}-easyCloud`;
@@ -11,7 +11,7 @@ export const setFile = (blob) => (dispatch) => {
     const uploadTask = firebase.storage().ref(`users/${uid}/${name}`).put(blob);
 
     console.log('after uploadTask');
-    dispatch({ type: START_UPLOAD, payload: uploadTask, blob });
+    dispatch({ type: START_UPLOAD, payload: uploadTask, blob, isPP });
   } catch (error) {
     console.log(error);
   }

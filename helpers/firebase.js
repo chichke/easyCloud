@@ -26,6 +26,7 @@ export const selfData = () =>
   new Promise((resolve, reject) => {
     const { uid } = firebase.auth().currentUser;
 
+    console.log('selfData');
     firebase
       .database()
       .ref(`users/${uid}`)
@@ -84,4 +85,10 @@ export const addDownloadUrl = (url) => {
       }
       return [url];
     });
+};
+
+export const setPP = (url) => {
+  const { uid } = firebase.auth().currentUser;
+
+  return firebase.database().ref(`/users/${uid}/pp`).set(url);
 };

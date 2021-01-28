@@ -1,38 +1,48 @@
 import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
-import React, { useEffect } from 'react';
-import { Image, Platform, Text, TouchableOpacity, View } from 'react-native';
+import React from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { useQuery } from 'react-query';
+import { useDispatch } from 'react-redux';
 import firebase from '../../../firebase';
 import { selfData } from '../../../helpers/firebase';
+import getBlob from '../../../helpers/getBlob';
+import { setFile } from '../../../redux/actions/uploadManager';
 import Button from '../../ButtonWithText';
 import Error from '../../Error';
 import Loading from '../../Loading';
+import { selfDataKey } from '../../queryKey';
 import styles from './styles';
 
 export default function Profile() {
   const { navigate } = useNavigation();
   const { email } = firebase.auth().currentUser;
   const toast = useToast();
+  const dispatch = useDispatch();
   // const onEdit = () => {
   //   navigate('Edit');
   // };
 
-  useEffect(() => {
-    (async () => {
-      if (Platform.OS !== 'web') {
-        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        if (status !== 'granted') {
-          toast.show('Sorry, we need camera roll permissions to make this work!', {
-            type: 'danger',
-          });
-        }
-      }
-    })();
-  }, []);
+  const pickImage = async () => {
+    const { cancelled, uri } = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.All,
+      allowsEditing: true,
+      aspect: [4, 3],
+      quality: 1,
+    });
 
-  const query = useQuery('selfdata', selfData);
+    if (cancelled) toast.show('User cancelled', { type: 'normal' });
+    else {
+      toast.show('Preparing file for upload', { type: 'success' });
+      console.log('Constructing blobs');
+      const blob = await getBlob(uri);
+
+      console.log('Constructing blobs done');
+      dispatch(setFile(blob, true));
+    }
+  };
+  const query = useQuery(selfDataKey, selfData);
 
   const onSettings = () => {
     navigate('Settings');
@@ -46,7 +56,7 @@ export default function Profile() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.picContainer}>
+      <TouchableOpacity style={styles.picContainer} onPress={pickImage}>
         <Image source={{ uri: data.pp }} style={styles.profilePic} />
       </TouchableOpacity>
       <View style={styles.texts}>

@@ -6,9 +6,11 @@ import { useToast } from 'react-native-fast-toast';
 import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFiles } from '../../../helpers/firebase';
+import getBlob from '../../../helpers/getBlob';
 import { setFile } from '../../../redux/actions/uploadManager';
 import Error from '../../Error';
 import Loading from '../../Loading';
+import { getFilesKey } from '../../queryKey';
 import FileItem from './FileItem';
 
 export default function Home() {
@@ -38,26 +40,14 @@ export default function Home() {
     else {
       toast.show('Preparing file for upload', { type: 'success' });
       console.log('Constructing blobs');
-      const blob = await new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.onload = () => {
-          resolve(xhr.response);
-        };
-        xhr.onerror = (e) => {
-          console.log(e);
-          reject(new TypeError('Network request failed'));
-        };
-        xhr.responseType = 'blob';
-        xhr.open('GET', uri, true);
-        xhr.send(null);
-      });
+      const blob = await getBlob(uri);
 
       console.log('Constructing blobs done');
       dispatch(setFile(blob));
     }
   };
 
-  const query = useQuery('getFiles', getFiles);
+  const query = useQuery(getFilesKey, getFiles);
 
   const { isLoading, isError, data, error } = query;
 

@@ -5,8 +5,9 @@ import { useToast } from 'react-native-fast-toast';
 import { useQueryClient } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import firebase from '../firebase';
-import { addDownloadUrl } from '../helpers/firebase';
+import { addDownloadUrl, setPP } from '../helpers/firebase';
 import { finish } from '../redux/actions/uploadManager';
+import { getFilesKey, selfDataKey } from './queryKey';
 
 const styles = StyleSheet.create({
   container: { flex: 0.05 },
@@ -16,7 +17,8 @@ const styles = StyleSheet.create({
 });
 
 function UploadManager() {
-  const uploadTask = useSelector((state) => state.uploadManager.uploadTask);
+  const { uploadTask, isPP } = useSelector((state) => state.uploadManager);
+
   const queryClient = useQueryClient();
   const toast = useToast();
   const [progress, setProgress] = useState(0);
@@ -74,10 +76,14 @@ function UploadManager() {
     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
     uploadTask.snapshot.ref
       .getDownloadURL()
-      .then((downloadURL) => {
-        addDownloadUrl(downloadURL);
+      .then(async (downloadURL) => {
+        if (isPP) {
+          await setPP(downloadURL);
+          queryClient.invalidateQueries(selfDataKey);
+        } else addDownloadUrl(downloadURL);
+
         console.log('File available at', downloadURL);
-        queryClient.invalidateQueries('getFiles');
+        queryClient.invalidateQueries(getFilesKey);
         toast.show('Upload successful', { type: 'success' });
         // TODO Add url data to firebase realtime DB
       })
