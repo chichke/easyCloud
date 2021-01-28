@@ -1,7 +1,8 @@
 import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
-import { FlatList, SafeAreaView, Text, TouchableOpacity } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
+import { FAB } from 'react-native-paper';
 import { useToast } from 'react-native-fast-toast';
 import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
@@ -12,9 +13,14 @@ import Error from '../../Error';
 import Loading from '../../Loading';
 import { getFilesKey } from '../../queryKey';
 import FileItem from './FileItem';
+import styles from './styles';
 
 export default function Home() {
+  // eslint-disable-next-line
   const uploading = useSelector((state) => state.uploadManager.uploading);
+  const [state, setState] = React.useState({ open: false });
+  const onStateChange = ({ open }) => setState({ open });
+
   const toast = useToast();
   const dispatch = useDispatch();
 
@@ -51,24 +57,39 @@ export default function Home() {
 
   const { isLoading, isError, data, error } = query;
 
+  const { open } = state;
+
   if (isLoading) return <Loading />;
 
   if (isError) return <Error error={error} />;
 
   // console.log(data.length);
   return (
-    <SafeAreaView>
-      <TouchableOpacity onPress={pickImage} disabled={uploading}>
-        <Text>Image</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={pickFile} disabled={uploading}>
-        <Text>File</Text>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <Text style={styles.boldText}>Uploaded files</Text>
       <FlatList
         data={data}
         renderItem={({ item }) => <FileItem item={item} />}
         keyExtractor={(item, index) => String(index)}
       />
-    </SafeAreaView>
+
+      <FAB.Group
+        open={open}
+        icon={open ? 'close' : 'plus'}
+        actions={[
+          {
+            icon: 'image',
+            label: 'Image',
+            onPress: () => pickImage(),
+          },
+          {
+            icon: 'file',
+            label: 'File',
+            onPress: () => pickFile(),
+          },
+        ]}
+        onStateChange={onStateChange}
+      />
+    </View>
   );
 }

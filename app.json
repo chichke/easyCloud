@@ -4,9 +4,9 @@
     "slug": "EASY_CLOUD",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/easy-cloud.png",
+    "icon": "./assets/square-easy-cloud.png",
     "splash": {
-      "image": "./assets/easy-cloud.png",
+      "image": "./assets/square-easy-cloud.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
