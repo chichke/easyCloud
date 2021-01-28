@@ -80,11 +80,13 @@ export default function Home() {
           {
             icon: 'image',
             label: 'Image',
+            disabled: { uploading },
             onPress: () => pickImage(),
           },
           {
             icon: 'file',
             label: 'File',
+            disabled: { uploading },
             onPress: () => pickFile(),
           },
         ]}
