@@ -99,6 +99,13 @@
 				"file": "Fichier",
 				"img": "Image"
 			},
+			"modal": {
+				"check": "Prévisualiser",
+				"delete": "Supprimer",
+				"save": "Enregistrer",
+				"setpp": "Définir comme photo de profil",
+				"share": "Partager"
+			},
 			"title": "Fichiers Uploadés"
 		},
 		"prof": {

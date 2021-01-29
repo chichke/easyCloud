@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, Text, TouchableOpacity } from 'react-native';
 import firebase from '../../firebase';
 
-export default function Settings() {
+function Settings() {
   const signout = () => {
     firebase.auth().signOut();
   };
@@ -15,3 +15,5 @@ export default function Settings() {
     </SafeAreaView>
   );
 }
+
+export default Settings;

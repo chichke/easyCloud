@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +24,7 @@ export default function ButtonWithText(props) {
   ButtonWithText.propTypes = {
     disabled: PropTypes.bool,
     title: PropTypes.string.isRequired,
-    onPress: PropTypes.func.isRequired,
+    onPress: PropTypes.func,
     // eslint-disable-next-line react/forbid-prop-types
     style: PropTypes.object,
     // eslint-disable-next-line react/forbid-prop-types
@@ -35,6 +35,7 @@ export default function ButtonWithText(props) {
     disabled: false,
     style: styles.container,
     styleText: styles.text,
+    onPress: () => Alert.alert('Button has no effect!'),
   };
 
   return (

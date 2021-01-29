@@ -99,6 +99,13 @@
 				"file": "File",
 				"img": "Immagine"
 			},
+			"modal": {
+				"check": "Anteprima",
+				"delete": "Cancellare",
+				"save": "Registra",
+				"setpp": "Imposta come immagine del profilo",
+				"share": "Condividi"
+			},
 			"title": "File caricati"
 		},
 		"prof": {

@@ -99,6 +99,13 @@
 				"file": "File",
 				"img": "Image"
 			},
+			"modal": {
+				"check": "Preview",
+				"delete": "Delete",
+				"save": "Register",
+				"setpp": "Set as profile picture",
+				"share": "Share"
+			},
 			"title": "Uploaded files"
 		},
 		"prof": {
