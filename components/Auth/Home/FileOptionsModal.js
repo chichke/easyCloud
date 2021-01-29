@@ -69,14 +69,14 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
       if (result.action === Share.sharedAction) {
         if (result.activityType) {
           // shared with activity type of result.activityType
-          toast.show(t('toast.home.shared'), { type: 'danger' });
+          toast.show(t('toast.home.shared'), { type: 'success' });
         } else {
           // shared
-          toast.show(t('toast.home.shared'), { type: 'danger' });
+          toast.show(t('toast.home.shared'), { type: 'success' });
         }
       } else if (result.action === Share.dismissedAction) {
         // dismissed
-        toast.show(t('toast.home.cancel'), { type: 'danger' });
+        toast.show(t('toast.home.cancel'));
       }
     } catch (error) {
       console.log(error);
