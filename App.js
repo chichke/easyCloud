@@ -10,7 +10,6 @@ import { Provider } from 'react-redux';
 import FileScreen from './components/Auth/Home/FileScreen';
 import HomeScreen from './components/Auth/Home/Home';
 import Profile from './components/Auth/Profile/Profile';
-import ScoreBoard from './components/Auth/ScoreBoard';
 import Settings from './components/Auth/Settings';
 import Signin from './components/NonAuth/Signin';
 import Signup from './components/NonAuth/Signup';
@@ -19,7 +18,6 @@ import {
   showHomeIcon,
   showLoginIcon,
   showProfileIcon,
-  showScoreBoardIcon,
   showSettingsIcon,
   showSignupIcon,
 } from './components/TabBarIcon';
@@ -77,11 +75,6 @@ export const AuthStack = () => (
   <>
     <Tab.Navigator initialRouteName="Home" lazy={false}>
       <Tab.Screen name="Home" component={Home} options={{ tabBarIcon: showHomeIcon }} />
-      <Tab.Screen
-        name="ScoreBoard"
-        component={ScoreBoard}
-        options={{ tabBarIcon: showScoreBoardIcon }}
-      />
       <Tab.Screen name="Settings" component={Settings} options={{ tabBarIcon: showSettingsIcon }} />
       <Tab.Screen name="Profile" component={Profile} options={{ tabBarIcon: showProfileIcon }} />
     </Tab.Navigator>

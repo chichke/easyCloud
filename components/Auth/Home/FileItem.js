@@ -9,9 +9,11 @@ import humanFileSize from '../../../helpers/humanFileSize';
 import Loading from '../../Loading';
 import IconSwitcher from './IconSwitcher';
 import styles from './styles';
+import Modal from './FileOptionsModal';
 
 export default function FileItem({ item: itemRef }) {
   const [data, setData] = useState(undefined);
+  const [isModalVisible, setIsModalVisible] = React.useState(false);
   const { navigate } = useNavigation();
 
   const fetchData = async () => {
@@ -31,23 +33,31 @@ export default function FileItem({ item: itemRef }) {
   const gotoDescription = () => {
     navigate('File', { itemRef, data });
   };
-  return (
-    <TouchableOpacity style={styles.file} onPress={gotoDescription}>
-      <View style={styles.iconContainer}>
-        <IconSwitcher mime={data.contentType} />
-      </View>
 
-      <View style={styles.restContainer}>
-        <Text style={styles.title}>{filename}</Text>
-        <View style={styles.row}>
-          <Text style={styles.subtitle} numberOfLines={1}>
-            {readableSize}
-          </Text>
-          <Text style={styles.subtitle}>{updated}</Text>
+  const onClose = () => {
+    setIsModalVisible(false);
+  };
+
+  return (
+    <>
+      <TouchableOpacity style={styles.file} onPress={setIsModalVisible}>
+        <View style={styles.iconContainer}>
+          <IconSwitcher mime={data.contentType} />
         </View>
-      </View>
-      {/* <Text>{`Created: ${created}`}</Text> */}
-    </TouchableOpacity>
+
+        <View style={styles.restContainer}>
+          <Text style={styles.title}>{filename}</Text>
+          <View style={styles.row}>
+            <Text style={styles.subtitle} numberOfLines={1}>
+              {readableSize}
+            </Text>
+            <Text style={styles.subtitle}>{updated}</Text>
+          </View>
+        </View>
+        {/* <Text>{`Created: ${created}`}</Text> */}
+      </TouchableOpacity>
+      <Modal isModalVisible={isModalVisible} onClose={onClose} itemRef={itemRef} data={data} />
+    </>
   );
 }
 

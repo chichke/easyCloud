@@ -45,7 +45,7 @@ export default function Signin() {
           <TextInput
             value={pass}
             onChangeText={setPass}
-            placeholder="Mot de passe"
+            placeholder="Password"
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
