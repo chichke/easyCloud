@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
@@ -17,7 +17,7 @@ import { selfDataKey } from '../../queryKey';
 import styles from './styles';
 
 export default function Profile() {
-  const { navigate } = useNavigation();
+  // const { navigate } = useNavigation();
   const { email } = firebase.auth().currentUser;
   const toast = useToast();
   const dispatch = useDispatch();
@@ -46,8 +46,8 @@ export default function Profile() {
   };
   const query = useQuery(selfDataKey, selfData);
 
-  const onSettings = () => {
-    navigate('Settings');
+  const signout = () => {
+    firebase.auth().signOut();
   };
 
   const { isLoading, isError, data, error } = query;
@@ -76,7 +76,7 @@ export default function Profile() {
           style={styles.button}
           styleText={styles.textButton}
           title={t('v.prof.cog')}
-          onPress={onSettings}
+          onPress={signout}
         />
       </View>
     </View>

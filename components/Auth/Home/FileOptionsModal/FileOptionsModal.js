@@ -7,11 +7,11 @@ import { useToast } from 'react-native-fast-toast';
 import Modal from 'react-native-modal';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import { useQueryClient } from 'react-query';
-import { deleteLogic, setPP } from '../../../helpers/firebase';
-import getFilename from '../../../helpers/getFilename';
-import t from '../../../translations';
-import { getFilesKey, selfDataKey } from '../../queryKey';
-import styles from './modalStyles';
+import { deleteLogic, setPP } from '../../../../helpers/firebase';
+import getFilename from '../../../../helpers/getFilename';
+import t from '../../../../translations';
+import { getFilesKey, selfDataKey } from '../../../queryKey';
+import styles from './styles';
 
 function ModalOptions({ iconName, title, onPress, color, size, textStyle }) {
   return (
