@@ -1,0 +1,2 @@
+export const ADD_FILESIZE = 'ADD_FILESIZE';
+export const RESET_FILESIZE = 'RESET_FILESIZE';

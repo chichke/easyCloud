@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
+import { useDispatch } from 'react-redux';
 import { getItem } from '../../../helpers/firebase';
 import getDate from '../../../helpers/getDate';
 import getFilename from '../../../helpers/getFilename';
 import humanFileSize from '../../../helpers/humanFileSize';
+import { addFileSize } from '../../../redux/actions/fileSize';
 import Loading from '../../Loading';
 import Modal from './FileOptionsModal';
 import IconSwitcher from './IconSwitcher';
@@ -13,15 +15,19 @@ import styles from './styles';
 export default function FileItem({ item: itemRef }) {
   const [data, setData] = useState(undefined);
   const [isModalVisible, setIsModalVisible] = React.useState(false);
+  const dispatch = useDispatch();
 
   const fetchData = async () => {
-    setData(await getItem(itemRef));
+    const item = await getItem(itemRef);
+    setData(item);
+    dispatch(addFileSize(item.size));
   };
   useEffect(() => {
     fetchData();
   }, []);
 
   if (!data) return <Loading />;
+
   const readableSize = humanFileSize(data.size);
   // eslint-disable-next-line
   const created = getDate(data.timeCreated);

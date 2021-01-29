@@ -1,4 +1,6 @@
 import firebase from '../firebase';
+import { resetFileSize } from '../redux/actions/fileSize';
+import store from '../redux/store';
 import transFire from '../translations/firebase';
 
 const addUserMetadata = (formData) => {
@@ -81,8 +83,9 @@ export const deleteLogic = async (itemRef) =>
 export const getFiles = () => {
   const { uid } = firebase.auth().currentUser;
 
+  // TODO Dispatch setSize at 0
   const listRef = firebase.storage().ref(`users/${uid}/`);
-
+  store.dispatch(resetFileSize());
   return new Promise((resolve, reject) => {
     listRef
       .listAll()

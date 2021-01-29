@@ -8,6 +8,7 @@ import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFiles } from '../../../helpers/firebase';
 import getBlob from '../../../helpers/getBlob';
+import humanFileSize from '../../../helpers/humanFileSize';
 import { setFile } from '../../../redux/actions/uploadManager';
 import t from '../../../translations';
 import Error from '../../Error';
@@ -19,6 +20,8 @@ import styles from './styles';
 export default function Home() {
   // eslint-disable-next-line
   const uploading = useSelector((state) => state.uploadManager.uploading);
+  const totalSize = useSelector((state) => state.fileSize.fileSize);
+
   const [state, setState] = React.useState({ open: false });
   const onStateChange = ({ open }) => setState({ open });
 
@@ -66,7 +69,6 @@ export default function Home() {
 
   if (isError) return <Error error={error} />;
 
-  // console.log(data.length);
   return (
     <View style={styles.container}>
       <Text style={styles.boldText}>{t('v.home.title')}</Text>
@@ -76,6 +78,7 @@ export default function Home() {
         keyExtractor={(item, index) => String(index)}
       />
 
+      <Text>{`Total ${humanFileSize(totalSize)}`}</Text>
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}

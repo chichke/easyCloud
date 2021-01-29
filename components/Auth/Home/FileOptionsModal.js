@@ -68,10 +68,10 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
   const deleteFile = () => {
     deleteLogic(itemRef)
       .then(() => {
-        queryClient.invalidateQueries(selfDataKey);
-        queryClient.invalidateQueries(getFilesKey);
         toast.show(t('toast.fscreen.deletedFile'), { type: 'success' });
         onClose();
+        queryClient.invalidateQueries(selfDataKey);
+        queryClient.invalidateQueries(getFilesKey);
         // File deleted successfully
       })
       .catch((error) => {
