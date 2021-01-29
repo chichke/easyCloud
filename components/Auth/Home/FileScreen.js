@@ -7,6 +7,7 @@ import { useToast } from 'react-native-fast-toast';
 import { useQueryClient } from 'react-query';
 import { deleteLogic, setPP } from '../../../helpers/firebase';
 import getFilename from '../../../helpers/getFilename';
+import t from '../../../translations';
 import { getFilesKey, selfDataKey } from '../../queryKey';
 
 export default function FileScreen() {
@@ -19,7 +20,7 @@ export default function FileScreen() {
   const { goBack } = useNavigation();
   const shareFile = async () => {
     const isApiAvailable = await Sharing.isAvailableAsync();
-    if (!isApiAvailable) toast.show('Impossible de partager sur ce device', { type: 'danger' });
+    if (!isApiAvailable) toast.show(t('toast.fscreen.disabledApi'), { type: 'danger' });
     else {
       const url = await itemRef.getDownloadURL();
       await Sharing.shareAsync(url);
@@ -44,14 +45,14 @@ export default function FileScreen() {
       .then(() => {
         queryClient.invalidateQueries(selfDataKey);
         queryClient.invalidateQueries(getFilesKey);
-        toast.show('Fichier supprimé', { type: 'success' });
+        toast.show(t('toast.fscreen.deletedFile'), { type: 'success' });
         goBack();
 
         // File deleted successfully
       })
       .catch((error) => {
         console.log(error);
-        toast.show('Erreur inconnue', { type: 'danger' });
+        toast.show(t('toast.fscreen.unknwon'), { type: 'danger' });
         // Uh-oh, an error occurred!
       });
   };
@@ -60,12 +61,12 @@ export default function FileScreen() {
     const url = await itemRef.getDownloadURL();
     setPP(url)
       .then(() => {
-        toast.show('Image de profil modifié', { type: 'success' });
+        toast.show(t('toast.fscreen.modifiedpp'), { type: 'success' });
         queryClient.invalidateQueries(selfDataKey);
       })
       .catch((err) => {
         console.log(err);
-        toast.show('Erreur inconnue', { type: 'danger' });
+        toast.show(t('toast.fscreen.unknwon'), { type: 'danger' });
       });
   };
 

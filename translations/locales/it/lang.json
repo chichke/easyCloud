@@ -1,0 +1,149 @@
+{
+	"fire": {
+		"auth/claims-too-large": "Il payload delle attestazioni fornito a setCustomUserClaims () supera la dimensione massima consentita di 1000 byte.",
+		"auth/email-already-exists": "L'email fornita è già utilizzata da un utente esistente. Ogni utente deve avere un'e-mail univoca.",
+		"auth/id-token-expired": "Il token ID Firebase fornito è scaduto.",
+		"auth/id-token-revoked": "Il token ID Firebase è stato revocato.",
+		"auth/insufficient-permission": "",
+		"auth/internal-error": "",
+		"auth/invalid-argument": "È stato fornito un argomento non valido a un metodo di autenticazione. Il messaggio di errore dovrebbe contenere informazioni aggiuntive.",
+		"auth/invalid-claims": "Gli attributi di rivendicazione personalizzati forniti a setCustomUserClaims () non sono validi.",
+		"auth/invalid-continue-uri": "L'URL di ricerca deve essere una stringa URL valida.",
+		"auth/invalid-creation-time": "L'ora di creazione deve essere una stringa di data UTC valida.",
+		"auth/invalid-credential": "",
+		"auth/invalid-disabled-field": "Il valore fornito per la proprietà utente disabilitato non è valido. Deve essere un valore booleano.",
+		"auth/invalid-display-name": "Il valore fornito per la proprietà utente displayName non è valido. Deve essere una stringa non vuota.",
+		"auth/invalid-dynamic-link-domain": "Il dominio di collegamento dinamico fornito non è configurato o autorizzato per il progetto corrente.",
+		"auth/invalid-email": "Il valore fornito per la proprietà dell'utente di posta elettronica non è valido. Deve essere un indirizzo email di tipo stringa.",
+		"auth/invalid-email-verified": "Il valore fornito per la proprietà utente emailVerified non è valido. Deve essere un valore booleano.",
+		"auth/invalid-hash-algorithm": "L'algoritmo hash deve corrispondere a una delle stringhe nell'elenco degli algoritmi supportati.",
+		"auth/invalid-hash-block-size": "La dimensione del blocco hash deve essere un numero valido.",
+		"auth/invalid-hash-derived-key-length": "La lunghezza della chiave derivata dall'hash deve essere un numero valido.",
+		"auth/invalid-hash-key": "La chiave hash deve essere un buffer di byte valido.",
+		"auth/invalid-hash-memory-cost": "Il costo della memoria hash deve essere un numero valido.",
+		"auth/invalid-hash-parallelization": "La parallelizzazione hash deve essere un numero valido.",
+		"auth/invalid-hash-rounds": "Gli hash round devono essere un numero valido.",
+		"auth/invalid-hash-salt-separator": "Il campo separatore di sale dell'algoritmo hash deve essere un buffer di byte valido.",
+		"auth/invalid-id-token": "Il token ID fornito non è un token ID Firebase valido.",
+		"auth/invalid-last-sign-in-time": "L'ultima ora di connessione deve essere una stringa di data UTC valida.",
+		"auth/invalid-page-token": "Il token della pagina successiva fornito in listUsers () non è valido. Deve essere una stringa non valida valida.",
+		"auth/invalid-password": "Il valore fornito per la proprietà utente della password non è valido. Deve essere una stringa di almeno sei caratteri.",
+		"auth/invalid-password-hash": "L'hash della password deve essere un buffer di byte valido.",
+		"auth/invalid-password-salt": "La password salt deve essere un buffer di byte valido",
+		"auth/invalid-phone-number": "Il valore fornito per phoneNumber non è valido. Deve essere una stringa identificativa conforme a E.164 non vuota.",
+		"auth/invalid-photo-url": "Il valore fornito per la proprietà utente photoURL non è valido. Deve essere una stringa URL.",
+		"auth/invalid-provider-data": "",
+		"auth/invalid-provider-id": "ProviderId deve essere una stringa dell'identificatore del provider supportato valida.",
+		"auth/invalid-session-cookie-duration": "La durata del cookie di sessione deve essere un numero valido in millisecondi compreso tra 5 minuti e 2 settimane.",
+		"auth/invalid-uid": "L'uid fornito deve essere una stringa non vuota di massimo 128 caratteri.",
+		"auth/invalid-user-import": "Il record utente da importare non è valido.",
+		"auth/maximum-user-count-exceeded": "È stato superato il numero massimo di utenti consentiti per l'importazione.",
+		"auth/missing-android-pkg-name": "Se è necessario installare l'app Android, è necessario fornire un nome di pacchetto Android.",
+		"auth/missing-continue-uri": "Nella richiesta deve essere fornito un URL di ricerca valido.",
+		"auth/missing-hash-algorithm": "L'importazione di utenti con hash delle password richiede che l'algoritmo hash e i relativi parametri vengano forniti.",
+		"auth/missing-ios-bundle-id": "Nella richiesta manca un ID bundle iOS.",
+		"auth/missing-uid": "Un identificatore uid è richiesto per l'operazione corrente.",
+		"auth/operation-not-allowed": "",
+		"auth/phone-number-already-exists": "",
+		"auth/project-not-found": "",
+		"auth/reserved-claims": "",
+		"auth/session-cookie-expired": "",
+		"auth/session-cookie-revoked": "",
+		"auth/uid-already-exists": "",
+		"auth/unauthorized-continue-uri": "",
+		"auth/user-not-found": "",
+		"unknown": ""
+	},
+	"nav": {
+		"home": "Casa",
+		"login": "Accesso",
+		"prof": "Profilo",
+		"signup": "Iscriviti ora"
+	},
+	"toast": {
+		"forget": {
+			"invalid": "Email non valida",
+			"success": "Email di recupero inviata"
+		},
+		"fscreen": {
+			"deletedFile": "File cancellato",
+			"disabledApi": "Impossibile condividere su questo dispositivo",
+			"modifiedpp": "Immagine del profilo cambiata",
+			"unknwon": "Errore sconosciuto"
+		},
+		"home": {
+			"cancel": "Utente cancellato",
+			"preparing": "Preparare il file per il caricamento"
+		},
+		"signin": {
+			"error": "Credenziali non valide"
+		},
+		"signup": {
+			"empty": "Uno dei campi è vuoto!",
+			"success": "Hai creato con successo il tuo account!"
+		},
+		"up": {
+			"cancel": "Caricamento cancellato",
+			"pause": "Caricamento in pausa",
+			"resume": "Caricamento ripreso",
+			"successful": "Caricamento riuscito"
+		}
+	},
+	"v": {
+		"forget": {
+			"ph": "jhon.doe@google.com",
+			"title": "Inserisci la tua mail :"
+		},
+		"home": {
+			"fab": {
+				"file": "File",
+				"img": "Immagine"
+			},
+			"title": "File caricati"
+		},
+		"prof": {
+			"cog": "Impostazioni",
+			"edit": "Modifica profilo"
+		},
+		"signin": {
+			"forget": "Hai dimenticato la tua password?",
+			"login": "Accesso",
+			"signup": "Registrazione"
+		},
+		"signup": {
+			"already": "Sei già registrato?",
+			"confirm": "Conferma la password",
+			"fname": "Nome",
+			"lname": "Nome",
+			"mail": "E-mail",
+			"pass": "Password",
+			"phone": "Telefono",
+			"signup": "Registra"
+		}
+	},
+	"yup": {
+		"confirm": "Le password devono corrispondere",
+		"fname": {
+			"max": "Nome troppo lungo!",
+			"min": "Nome troppo corto!",
+			"r": "Il nome è obbligatorio"
+		},
+		"lname": {
+			"max": "Cognome troppo lungo!",
+			"min": "Cognome troppo corto!",
+			"r": "Il cognome è obbligatorio"
+		},
+		"mail": {
+			"invalid": "Mail non valida",
+			"r": "L'e-mail è obbligatoria"
+		},
+		"pass": {
+			"max": "La password è troppo lunga!",
+			"min": "La password è troppo corta!",
+			"r": "La password è obbligatoria"
+		},
+		"phone": {
+			"invalid": "Il numero di telefono non è valido"
+		}
+	}
+}

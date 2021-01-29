@@ -1,0 +1,149 @@
+{
+	"fire": {
+		"auth/claims-too-large": "La charge utile des revendications fournie à setCustomUserClaims() dépasse la taille maximale autorisée de 1 000 octets.",
+		"auth/email-already-exists": "L'e-mail fourni est déjà utilisé par un utilisateur existant. Chaque utilisateur doit avoir un e-mail unique.",
+		"auth/id-token-expired": "Le jeton d'ID Firebase fourni a expiré.",
+		"auth/id-token-revoked": "Le jeton Firebase ID a été révoqué.",
+		"auth/insufficient-permission": "Les informations d'identification utilisées pour initialiser le SDK Admin ne disposent pas des autorisations nécessaires pour accéder à la ressource d'authentification demandée. Reportez-vous à Configurer un projet Firebase pour obtenir de la documentation sur la manière de générer des informations d'identification avec les autorisations appropriées et de l'utiliser pour authentifier les SDK d'administration.",
+		"auth/internal-error": "Le serveur d'authentification a rencontré une erreur inattendue lors de la tentative de traitement de la demande. Le message d'erreur doit contenir la réponse du serveur d'authentification contenant des informations supplémentaires. Si l'erreur persiste, veuillez signaler le problème à notre canal de support de rapport de bogue .",
+		"auth/invalid-argument": "Un argument non valide a été fourni à une méthode d'authentification. Le message d'erreur doit contenir des informations supplémentaires.",
+		"auth/invalid-claims": "Les attributs de revendication personnalisés fournis à setCustomUserClaims() sont pas valides.",
+		"auth/invalid-continue-uri": "L'URL de poursuite doit être une chaîne d'URL valide.",
+		"auth/invalid-creation-time": "L'heure de création doit être une chaîne de date UTC valide.",
+		"auth/invalid-credential": "Les informations d'identification utilisées pour authentifier les SDK d'administration ne peuvent pas être utilisées pour effectuer l'action souhaitée. Certaines méthodes d'authentification telles que createCustomToken() et verifyIdToken() nécessitent que le SDK soit initialisé avec une information d'identification de certificat, par opposition à un jeton d'actualisation ou à une information d'identification par défaut de l'application. Consultez Initialiser le SDK pour obtenir de la documentation sur la façon d'authentifier les SDK d'administration avec des informations d'identification de certificat.",
+		"auth/invalid-disabled-field": "La valeur fournie pour la propriété utilisateur disabled n'est pas valide. Ce doit être un booléen.",
+		"auth/invalid-display-name": "La valeur fournie pour la propriété utilisateur displayName n'est pas valide. Ce doit être une chaîne non vide.",
+		"auth/invalid-dynamic-link-domain": "Le domaine de lien dynamique fourni n'est pas configuré ou autorisé pour le projet en cours.",
+		"auth/invalid-email": "La valeur fournie pour la propriété d'utilisateur de email n'est pas valide. Il doit s'agir d'une adresse e-mail de type chaîne.",
+		"auth/invalid-email-verified": "La valeur fournie pour la propriété utilisateur emailVerified n'est pas valide. Ce doit être un booléen.",
+		"auth/invalid-hash-algorithm": "L'algorithme de hachage doit correspondre à l'une des chaînes de la liste des algorithmes pris en charge.",
+		"auth/invalid-hash-block-size": "La taille du bloc de hachage doit être un nombre valide.",
+		"auth/invalid-hash-derived-key-length": "La longueur de la clé dérivée de hachage doit être un nombre valide.",
+		"auth/invalid-hash-key": "La clé de hachage doit être un tampon d'octets valide.",
+		"auth/invalid-hash-memory-cost": "Le coût de la mémoire de hachage doit être un nombre valide.",
+		"auth/invalid-hash-parallelization": "La parallélisation de hachage doit être un nombre valide.",
+		"auth/invalid-hash-rounds": "Les rondes de hachage doivent être un nombre valide.",
+		"auth/invalid-hash-salt-separator": "Le champ de séparateur de sel de l'algorithme de hachage doit être un tampon d'octets valide.",
+		"auth/invalid-id-token": "Le jeton d'ID fourni n'est pas un jeton d'ID Firebase valide.",
+		"auth/invalid-last-sign-in-time": "La dernière heure de connexion doit être une chaîne de date UTC valide.",
+		"auth/invalid-page-token": "Le jeton de page suivante fourni dans listUsers() n'est pas valide. Il doit s'agir d'une chaîne non vide valide.",
+		"auth/invalid-password": "La valeur fournie pour la propriété utilisateur de password n'est pas valide. Il doit s'agir d'une chaîne d'au moins six caractères.",
+		"auth/invalid-password-hash": "Le hachage du mot de passe doit être un tampon d'octets valide.",
+		"auth/invalid-password-salt": "Le sel de mot de passe doit être un tampon d'octets valide",
+		"auth/invalid-phone-number": "La valeur fournie pour phoneNumber n'est pas valide. Il doit s'agir d'une chaîne d'identifiant conforme à la norme E.164 non vide.",
+		"auth/invalid-photo-url": "La valeur fournie pour la propriété utilisateur photoURL n'est pas valide. Il doit s'agir d'une URL de chaîne.",
+		"auth/invalid-provider-data": "Le providerData doit être un tableau valide d'objets UserInfo.",
+		"auth/invalid-provider-id": "Le providerId doit être une chaîne d'identifiant de fournisseur prise en charge valide.",
+		"auth/invalid-session-cookie-duration": "La durée du cookie de session doit être un nombre valide en millisecondes entre 5 minutes et 2 semaines.",
+		"auth/invalid-uid": "L' uid fourni doit être une chaîne non vide d'au plus 128 caractères.",
+		"auth/invalid-user-import": "L'enregistrement utilisateur à importer n'est pas valide.",
+		"auth/maximum-user-count-exceeded": "Le nombre maximal d'utilisateurs autorisés à importer a été dépassé.",
+		"auth/missing-android-pkg-name": "Un nom de package Android doit être fourni si l'application Android doit être installée.",
+		"auth/missing-continue-uri": "Une URL de poursuite valide doit être fournie dans la demande.",
+		"auth/missing-hash-algorithm": "L'importation d'utilisateurs avec des hachages de mot de passe nécessite que l'algorithme de hachage et ses paramètres soient fournis.",
+		"auth/missing-ios-bundle-id": "Il manque un ID de bundle iOS dans la demande.",
+		"auth/missing-uid": "Un identifiant uid est requis pour l'opération en cours.",
+		"auth/operation-not-allowed": "Le fournisseur de connexion fourni est désactivé pour votre projet Firebase. Activez -le dans la section Méthode de connexion de la console Firebase.",
+		"auth/phone-number-already-exists": "Le phoneNumber fourni est déjà utilisé par un utilisateur existant. Chaque utilisateur doit avoir un phoneNumber unique.",
+		"auth/project-not-found": "Aucun projet Firebase n'a été trouvé pour les informations d'identification utilisées pour initialiser les SDK Admin. Reportez-vous à Configurer un projet Firebase pour obtenir de la documentation sur la façon de générer des informations d'identification pour votre projet et de l'utiliser pour authentifier les SDK d'administration.",
+		"auth/reserved-claims": "Une ou plusieurs revendications utilisateur personnalisées fournies à setCustomUserClaims() sont réservées. Par exemple, les revendications spécifiques OIDC telles que (sub, iat, iss, exp, aud, auth_time, etc.) ne doivent pas être utilisées comme clés pour les revendications personnalisées.",
+		"auth/session-cookie-expired": "Le cookie de session Firebase fourni a expiré.",
+		"auth/session-cookie-revoked": "Le cookie de session Firebase a été révoqué.",
+		"auth/uid-already-exists": "L' uid fourni est déjà utilisé par un utilisateur existant. Chaque utilisateur doit avoir un uid unique.",
+		"auth/unauthorized-continue-uri": "Le domaine de l'URL de poursuite ne figure pas sur la liste blanche. Ajoutez le domaine à la liste blanche dans la console Firebase.",
+		"auth/user-not-found": "Il n'existe aucun enregistrement d'utilisateur correspondant à l'identifiant fourni",
+		"unknown": "Erreur inconnue"
+	},
+	"nav": {
+		"home": "Accueil",
+		"login": "Connexion",
+		"prof": "Profil",
+		"signup": "S'inscrire"
+	},
+	"toast": {
+		"forget": {
+			"invalid": "Mail non valable",
+			"success": "Email de recupération envoyé"
+		},
+		"fscreen": {
+			"deletedFile": "Fichier supprimé",
+			"disabledApi": "Impossible de partager sur ce device",
+			"modifiedpp": "Image de profil modifié",
+			"unknwon": "Erreur inconnue"
+		},
+		"home": {
+			"cancel": "Annulation...",
+			"preparing": "Préparation du fichier en vue de son upload"
+		},
+		"signin": {
+			"error": "Informations d'identification invalides"
+		},
+		"signup": {
+			"empty": "Un des champs est vide !",
+			"success": "Vous avez créé votre compte avec succès !"
+		},
+		"up": {
+			"cancel": "Upload annulé",
+			"pause": "Chargement en pause",
+			"resume": "Reprise de l'upload",
+			"successful": "Upload réussi"
+		}
+	},
+	"v": {
+		"forget": {
+			"ph": "jhon.doe@google.com",
+			"title": "Entrez votre mail :"
+		},
+		"home": {
+			"fab": {
+				"file": "Fichier",
+				"img": "Image"
+			},
+			"title": "Fichiers Uploadés"
+		},
+		"prof": {
+			"cog": "Réglages",
+			"edit": "Editer le profil"
+		},
+		"signin": {
+			"forget": "Mot de passe oublié ?",
+			"login": "Connexion",
+			"signup": "Inscription"
+		},
+		"signup": {
+			"already": "Déjà enregistré(e) ?",
+			"confirm": "Confirmer mot de passe",
+			"fname": "Prénom",
+			"lname": "Nom",
+			"mail": "E-mail",
+			"pass": "Mot de passe",
+			"phone": "Téléphone",
+			"signup": "S'inscrire"
+		}
+	},
+	"yup": {
+		"confirm": "Les mots de passe doivent correspondre",
+		"fname": {
+			"max": "Prénom trop long !",
+			"min": "Prénom trop court !",
+			"r": "Le prénom est obligatoire"
+		},
+		"lname": {
+			"max": "Nom de famille trop long !",
+			"min": "Nom de famille trop court !",
+			"r": "Le nom de famille est obligatoire"
+		},
+		"mail": {
+			"invalid": "Mail non valide",
+			"r": "Le mail est obligatoire"
+		},
+		"pass": {
+			"max": "Le mot de passe est trop long !",
+			"min": "Le mot de passe est trop court !",
+			"r": "Le mot de passe est obligatoire"
+		},
+		"phone": {
+			"invalid": "Le numéro de téléphone n'est pas valide"
+		}
+	}
+}

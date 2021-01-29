@@ -9,6 +9,7 @@ import firebase from '../../../firebase';
 import { selfData } from '../../../helpers/firebase';
 import getBlob from '../../../helpers/getBlob';
 import { setFile } from '../../../redux/actions/uploadManager';
+import t from '../../../translations';
 import Button from '../../ButtonWithText';
 import Error from '../../Error';
 import Loading from '../../Loading';
@@ -32,9 +33,9 @@ export default function Profile() {
       quality: 1,
     });
 
-    if (cancelled) toast.show('User cancelled', { type: 'normal' });
+    if (cancelled) toast.show(t('toast.home.cancel'), { type: 'normal' });
     else {
-      toast.show('Preparing file for upload', { type: 'success' });
+      toast.show(t('toast.home.preparing'), { type: 'success' });
       console.log('Constructing blobs');
       const blob = await getBlob(uri);
 
@@ -67,13 +68,13 @@ export default function Profile() {
         <Button
           style={styles.button}
           styleText={styles.textButton}
-          title="Editer le profil"
+          title={t('v.prof.edit')}
           // onPress={onEdit}
         />
         <Button
           style={styles.button}
           styleText={styles.textButton}
-          title="Réglages"
+          title={t('v.prof.cog')}
           onPress={onSettings}
         />
       </View>

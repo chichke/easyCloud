@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import firebase from '../../firebase';
+import t from '../../translations';
 import ForgetModal from './ForgetModal';
 import styles from './styles';
 
@@ -20,7 +21,7 @@ export default function Signin() {
     try {
       await firebase.auth().signInWithEmailAndPassword(mail, pass);
     } catch (e) {
-      toast.show('Invalid credentials', { type: 'danger' });
+      toast.show(t('toast.signin.error'), { type: 'danger' });
     }
   };
   const onSignup = () => {
@@ -34,7 +35,7 @@ export default function Signin() {
 
           <TextInput
             onChangeText={setMail}
-            placeholder="E-mail"
+            placeholder={t('v.forget.ph')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             keyboardType="email-address"
@@ -45,7 +46,7 @@ export default function Signin() {
           <TextInput
             value={pass}
             onChangeText={setPass}
-            placeholder="Mot de passe"
+            placeholder={t('v.signup.pass')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
@@ -53,13 +54,13 @@ export default function Signin() {
             secureTextEntry
           />
           <TouchableOpacity style={styles.button} onPress={onSignin}>
-            <Text style={styles.text}>Connexion</Text>
+            <Text style={styles.text}>{t('v.signin.login')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={onSignup}>
-            <Text style={styles.text}>Inscription</Text>
+            <Text style={styles.text}>{t('v.signin.signup')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={{ marginVertical: 20 }} onPress={() => setShowModal(true)}>
-            <Text style={styles.text}>Mot de passe oublié ?</Text>
+            <Text style={styles.text}>{t('v.signin.forget')}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

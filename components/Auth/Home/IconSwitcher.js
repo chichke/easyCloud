@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
 
 export default function IconSwitcher({ mime }) {
   const className = getClassNameForMimeType(mime);
-  console.log(className);
   return <FontAwesome5 name={className} size={wp(8)} color="deepskyblue" style={styles.icon} />;
 }
 

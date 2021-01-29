@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { createAccount } from '../../helpers/firebase';
+import t from '../../translations';
+import transFire from '../../translations/firebase';
 import Loading from '../Loading';
 import schema from './Schema';
 import styles from './styles';
@@ -28,10 +30,10 @@ export default function Signup() {
   const createAcc = (formData) => {
     createAccount(formData)
       .then(() => {
-        toast.show('Successfully created your account!', { type: 'success' });
+        toast.show(t('toast.signup.success'), { type: 'success' });
       })
       .catch((err) => {
-        toast.show(err.message, { type: 'danger' });
+        toast.show(transFire(err.code), { type: 'danger' });
         setLoading(false);
       });
   };
@@ -46,7 +48,7 @@ export default function Signup() {
     };
 
     if (!first || !last || !phone || !mail || !pass || !confirm)
-      toast.show('One of the field is empty!', { type: 'danger' });
+      toast.show(t('toast.signup.empty'), { type: 'danger' });
     else
       schema
         .validate(formData)
@@ -71,7 +73,7 @@ export default function Signup() {
           <Image source={logo} style={styles.image} />
 
           <TextInput
-            placeholder="Prénom"
+            placeholder={t('v.signup.fname')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
@@ -79,7 +81,7 @@ export default function Signup() {
             value={first}
           />
           <TextInput
-            placeholder="Nom"
+            placeholder={t('v.signup.lname')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
@@ -87,7 +89,7 @@ export default function Signup() {
             value={last}
           />
           <TextInput
-            placeholder="Téléphone"
+            placeholder={t('v.signup.phone')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
@@ -96,7 +98,7 @@ export default function Signup() {
             value={phone}
           />
           <TextInput
-            placeholder="E-mail"
+            placeholder={t('v.signup.mail')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             keyboardType="email-address"
@@ -106,7 +108,7 @@ export default function Signup() {
             value={mail}
           />
           <TextInput
-            placeholder="Mot de passe"
+            placeholder={t('v.signup.pass')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
@@ -116,7 +118,7 @@ export default function Signup() {
             value={pass}
           />
           <TextInput
-            placeholder="Confirmer mot de passe"
+            placeholder={t('v.signup.confirm')}
             placeholderTextColor={placeholderTextColor}
             style={styles.inputContainer}
             autoCorrect={false}
@@ -126,10 +128,10 @@ export default function Signup() {
             value={confirm}
           />
           <TouchableOpacity style={{ marginVertical: 20 }} onPress={onSignin}>
-            <Text style={styles.text}>Déjà enregistré(e) ?</Text>
+            <Text style={styles.text}>{t('v.signup.already')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={onSignup}>
-            <Text style={styles.text}>S&apos;inscrire</Text>
+            <Text style={styles.text}>{t('v.signup.signup')}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

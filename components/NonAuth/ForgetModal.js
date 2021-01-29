@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { Alert, Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
-import { FAB } from 'react-native-paper';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import * as yup from 'yup';
 import firebase from '../../firebase';
+import t from '../../translations';
 
 const styles = StyleSheet.create({
   centeredView: {
@@ -56,10 +56,10 @@ export default function ForgetModal({ setModalVisible }) {
 
   const validateMail = async () => {
     const isValid = await schema.isValid(text);
-    if (!isValid) toast.show('Mail invalide', { type: 'danger' });
+    if (!isValid) toast.show(t('toast.forget.invalid'), { type: 'danger' });
     else {
       await firebase.auth().sendPasswordResetEmail(text);
-      toast.show('Email de recupération envoyé', { type: 'success' });
+      toast.show(t('toast.forget.success'), { type: 'success' });
     }
   };
   return (
@@ -83,12 +83,14 @@ export default function ForgetModal({ setModalVisible }) {
             >
               <Feather name="x" size={wp(5)} />
             </TouchableOpacity>
-            <Text style={styles.textStyle}>Enter your mail: </Text>
+            <Text style={styles.textStyle}>{t('v.forget.title')}</Text>
             <TextInput
               onChangeText={setText}
               value={text}
+              placeholder={t('v.forget.ph')}
               style={{
                 fontSize: wp(3),
+                color: 'black',
                 width: wp(80),
                 height: wp(6),
                 borderRadius: wp(2),
@@ -104,13 +106,6 @@ export default function ForgetModal({ setModalVisible }) {
           </View>
         </View>
       </Modal>
-
-      <FAB
-        style={{ ...styles.fab, opacity: text ? 1 : 0 }}
-        small
-        icon="plus"
-        onPress={() => console.log('Pressed')}
-      />
     </>
   );
 }

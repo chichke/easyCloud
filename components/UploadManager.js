@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import firebase from '../firebase';
 import { addDownloadUrl, setPP } from '../helpers/firebase';
 import { finish } from '../redux/actions/uploadManager';
+import t from '../translations';
 import { getFilesKey, selfDataKey } from './queryKey';
 
 const styles = StyleSheet.create({
@@ -30,10 +31,10 @@ function UploadManager() {
   const handlePlayPause = () => {
     if (isRunning) {
       uploadTask.pause();
-      toast.show('Upload paused');
+      toast.show(t('toast.up.pause'));
     } else {
       uploadTask.resume();
-      toast.show('Upload resumed');
+      toast.show(t('toast.up.resume'));
     }
   };
 
@@ -46,7 +47,7 @@ function UploadManager() {
     } finally {
       if (unsubscribe) unsubscribe();
 
-      toast.show('Upload cancelled');
+      toast.show(t('toast.up.cancel'));
     }
   };
 
@@ -84,7 +85,7 @@ function UploadManager() {
 
         console.log('File available at', downloadURL);
         queryClient.invalidateQueries(getFilesKey);
-        toast.show('Upload successful', { type: 'success' });
+        toast.show(t('toast.up.successful'), { type: 'success' });
         // TODO Add url data to firebase realtime DB
       })
       .catch((err) => console.log(err))

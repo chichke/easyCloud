@@ -1,4 +1,5 @@
 import firebase from '../firebase';
+import transFire from '../translations/firebase';
 
 const addUserMetadata = (formData) => {
   const { uid } = firebase.auth().currentUser;
@@ -36,7 +37,7 @@ export const selfData = () =>
           resolve(res.val());
         },
         (err) => {
-          reject(err.message);
+          reject(transFire(err.code));
         }
       );
   });

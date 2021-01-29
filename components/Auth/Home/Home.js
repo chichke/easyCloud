@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getFiles } from '../../../helpers/firebase';
 import getBlob from '../../../helpers/getBlob';
 import { setFile } from '../../../redux/actions/uploadManager';
+import t from '../../../translations';
 import Error from '../../Error';
 import Loading from '../../Loading';
 import { getFilesKey } from '../../queryKey';
@@ -26,9 +27,9 @@ export default function Home() {
 
   const pickFile = async () => {
     const { type, uri } = await DocumentPicker.getDocumentAsync({ copyToCacheDirectory: false });
-    if (type === 'cancel') toast.show('User cancelled', { type: 'normal' });
+    if (type === 'cancel') toast.show(t('toast.home.cancel'), { type: 'normal' });
     else {
-      toast.show('Preparing file for upload', { type: 'success' });
+      toast.show(t('toast.home.preparing'), { type: 'success' });
       const blob = await getBlob(uri);
       dispatch(setFile(blob));
     }
@@ -42,9 +43,9 @@ export default function Home() {
       quality: 1,
     });
 
-    if (cancelled) toast.show('User cancelled', { type: 'normal' });
+    if (cancelled) toast.show(t('toast.home.cancel'), { type: 'normal' });
     else {
-      toast.show('Preparing file for upload', { type: 'success' });
+      toast.show(t('toast.home.preparing'), { type: 'success' });
       console.log('Constructing blobs');
       const blob = await getBlob(uri);
 
@@ -66,7 +67,7 @@ export default function Home() {
   // console.log(data.length);
   return (
     <View style={styles.container}>
-      <Text style={styles.boldText}>Uploaded files</Text>
+      <Text style={styles.boldText}>{t('v.home.title')}</Text>
       <FlatList
         data={data}
         renderItem={({ item }) => <FileItem item={item} />}
@@ -80,12 +81,12 @@ export default function Home() {
         actions={[
           {
             icon: 'image',
-            label: 'Image',
+            label: t('v.home.fab.img'),
             onPress: () => pickImage(),
           },
           {
             icon: 'file',
-            label: 'File',
+            label: t('v.home.fab.file'),
             onPress: () => pickFile(),
           },
         ]}

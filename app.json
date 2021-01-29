@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/square-easy-cloud.png",
     "splash": {
-      "image": "./assets/square-easy-cloud.png",
+      "image": "./assets/easy-cloud.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
