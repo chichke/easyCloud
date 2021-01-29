@@ -11,7 +11,7 @@ import t from '../translations';
 import { getFilesKey, selfDataKey } from './queryKey';
 
 const styles = StyleSheet.create({
-  container: { flex: 0.05 },
+  container: { flex: 0.1 },
   progress: { flex: 1, backgroundColor: 'red' },
   playpause: { position: 'absolute', left: '40%', backgroundColor: 'white', top: '20%' },
   cancel: { position: 'absolute', right: '40%', backgroundColor: 'white', top: '20%' },

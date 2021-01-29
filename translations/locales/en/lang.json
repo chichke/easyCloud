@@ -73,7 +73,8 @@
 		},
 		"home": {
 			"cancel": "User cancelled",
-			"preparing": "Preparing file for upload"
+			"preparing": "Preparing file for upload",
+			"shared": "Successfuly shared"
 		},
 		"signin": {
 			"error": "Invalid credentials"
@@ -106,7 +107,11 @@
 				"setpp": "Set as profile picture",
 				"share": "Share"
 			},
-			"title": "Uploaded files"
+			"share": {
+				"title": "Attachment"
+			},
+			"title": "Uploaded files",
+			"total": "Total:"
 		},
 		"prof": {
 			"cog": "Settings",

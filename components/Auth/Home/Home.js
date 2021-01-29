@@ -42,8 +42,7 @@ export default function Home() {
   const pickImage = async () => {
     const { cancelled, uri } = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
-      allowsEditing: true,
-      aspect: [4, 3],
+      allowsEditing: false,
       quality: 1,
     });
 
@@ -74,11 +73,11 @@ export default function Home() {
       <Text style={styles.boldText}>{t('v.home.title')}</Text>
       <FlatList
         data={data}
-        renderItem={({ item }) => <FileItem item={item} />}
+        renderItem={({ item }) => <FileItem item={item} reload={totalSize === 0} />}
         keyExtractor={(item, index) => String(index)}
       />
 
-      <Text>{`Total ${humanFileSize(totalSize)}`}</Text>
+      <Text>{`${t('v.home.total')} ${humanFileSize(totalSize)}`}</Text>
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}

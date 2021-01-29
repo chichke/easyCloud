@@ -73,7 +73,8 @@
 		},
 		"home": {
 			"cancel": "Annulation...",
-			"preparing": "Préparation du fichier en vue de son upload"
+			"preparing": "Préparation du fichier en vue de son upload",
+			"shared": "Partagé avec succès"
 		},
 		"signin": {
 			"error": "Informations d'identification invalides"
@@ -106,7 +107,11 @@
 				"setpp": "Définir comme photo de profil",
 				"share": "Partager"
 			},
-			"title": "Fichiers Uploadés"
+			"share": {
+				"title": "Pièce-jointe"
+			},
+			"title": "Fichiers Uploadés",
+			"total": "Total :"
 		},
 		"prof": {
 			"cog": "Réglages",

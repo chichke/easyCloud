@@ -1,9 +1,8 @@
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
-import * as Sharing from 'expo-sharing';
 import * as WebBrowser from 'expo-web-browser';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Platform, Share, Text, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import Modal from 'react-native-modal';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
@@ -53,12 +52,35 @@ ModalOptions.defaultProps = {
 export default function FileOptionsModal({ isModalVisible, onClose, itemRef, data }) {
   const toast = useToast();
   const queryClient = useQueryClient();
+
+  const mimeType = data.contentType;
+  const filename = getFilename(data.fullPath);
+
   const shareFile = async () => {
-    const isApiAvailable = await Sharing.isAvailableAsync();
-    if (!isApiAvailable) toast.show(t('toast.fscreen.disabledApi'), { type: 'danger' });
-    else {
+    try {
       const url = await itemRef.getDownloadURL();
-      await Sharing.shareAsync(url);
+      console.log(url);
+      const result = await Share.share(
+        Platform.select({
+          ios: { url },
+          android: { title: t('v.home.share.title'), content: url },
+        })
+      );
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+          toast.show(t('toast.home.shared'), { type: 'danger' });
+        } else {
+          // shared
+          toast.show(t('toast.home.shared'), { type: 'danger' });
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+        toast.show(t('toast.home.cancel'), { type: 'danger' });
+      }
+    } catch (error) {
+      console.log(error);
+      toast.show(t('toast.fscreen.unknwon'), { type: 'danger' });
     }
   };
 
@@ -67,8 +89,6 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
   // const created = getDate(data.timeCreated);
   // const updated = getDate(data.updated);
   // const filename = getFilename(data.fullPath);
-  const mimeType = data.contentType;
-  const filename = getFilename(data.fullPath);
 
   const deleteFile = () => {
     deleteLogic(itemRef)
@@ -122,7 +142,6 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
           size={25}
           onPress={onClose}
         />
-        <ModalOptions iconName="download" title={t('v.home.modal.save')} onPress={onClose} />
         <ModalOptions iconName="share-google" title={t('v.home.modal.share')} onPress={shareFile} />
         <ModalOptions iconName="delete" title={t('v.home.modal.delete')} onPress={deleteFile} />
         <ModalOptions iconName="eyeo" title={t('v.home.modal.check')} onPress={checkWebView} />

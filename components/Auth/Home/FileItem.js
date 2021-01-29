@@ -24,7 +24,7 @@ export default function FileItem({ item: itemRef }) {
   };
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [itemRef]);
 
   if (!data) return <Loading />;
 

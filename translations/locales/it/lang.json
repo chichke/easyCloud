@@ -73,7 +73,8 @@
 		},
 		"home": {
 			"cancel": "Utente cancellato",
-			"preparing": "Preparare il file per il caricamento"
+			"preparing": "Preparare il file per il caricamento",
+			"shared": "Condiviso con successo"
 		},
 		"signin": {
 			"error": "Credenziali non valide"
@@ -106,7 +107,11 @@
 				"setpp": "Imposta come immagine del profilo",
 				"share": "Condividi"
 			},
-			"title": "File caricati"
+			"share": {
+				"title": "Allegato"
+			},
+			"title": "File caricati",
+			"total": "Totale :"
 		},
 		"prof": {
 			"cog": "Impostazioni",
