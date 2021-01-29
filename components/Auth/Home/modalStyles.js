@@ -23,6 +23,11 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  boldTitle: {
+    fontSize: 15,
+    marginLeft: 10,
+    fontWeight: 'bold',
+  },
   text: {
     fontSize: 15,
     marginLeft: 10,

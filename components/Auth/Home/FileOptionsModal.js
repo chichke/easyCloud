@@ -9,11 +9,12 @@ import Modal from 'react-native-modal';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import { useQueryClient } from 'react-query';
 import { deleteLogic, setPP } from '../../../helpers/firebase';
+import getFilename from '../../../helpers/getFilename';
 import t from '../../../translations';
 import { getFilesKey, selfDataKey } from '../../queryKey';
 import styles from './modalStyles';
 
-function ModalOptions({ iconName, title, onPress, color, size }) {
+function ModalOptions({ iconName, title, onPress, color, size, textStyle }) {
   return (
     <View style={styles.row}>
       <TouchableOpacity style={styles.row} onPress={onPress}>
@@ -25,7 +26,7 @@ function ModalOptions({ iconName, title, onPress, color, size }) {
           )}
         </View>
         <View style={{ flex: 8 }}>
-          <Text style={styles.text}>{title}</Text>
+          <Text style={[styles.text, textStyle]}>{title}</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -38,12 +39,15 @@ ModalOptions.propTypes = {
   onPress: PropTypes.func.isRequired,
   color: PropTypes.string,
   size: PropTypes.number,
+  // eslint-disable-next-line react/forbid-prop-types
+  textStyle: PropTypes.object,
 };
 
 ModalOptions.defaultProps = {
   color: 'deepskyblue',
   size: widthPercentageToDP(8),
   title: '',
+  textStyle: styles.text,
 };
 
 export default function FileOptionsModal({ isModalVisible, onClose, itemRef, data }) {
@@ -64,6 +68,7 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
   // const updated = getDate(data.updated);
   // const filename = getFilename(data.fullPath);
   const mimeType = data.contentType;
+  const filename = getFilename(data.fullPath);
 
   const deleteFile = () => {
     deleteLogic(itemRef)
@@ -109,7 +114,14 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
       onBackdropPress={onClose}
     >
       <View style={styles.modalContainer}>
-        <ModalOptions iconName="close" color="black" size={25} onPress={onClose} />
+        <ModalOptions
+          iconName="close"
+          title={filename}
+          textStyle={styles.boldTitle}
+          color="black"
+          size={25}
+          onPress={onClose}
+        />
         <ModalOptions iconName="download" title={t('v.home.modal.save')} onPress={onClose} />
         <ModalOptions iconName="share-google" title={t('v.home.modal.share')} onPress={shareFile} />
         <ModalOptions iconName="delete" title={t('v.home.modal.delete')} onPress={deleteFile} />
