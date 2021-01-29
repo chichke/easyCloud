@@ -40,6 +40,7 @@ export default function Profile() {
       const blob = await getBlob(uri);
 
       console.log('Constructing blobs done');
+      // TODO setFile 3 eme params is filename!
       dispatch(setFile(blob, true));
     }
   };

@@ -1,10 +1,10 @@
 import firebase from '../../firebase';
 import { END_UPLOAD, START_UPLOAD } from '../types/uploadManager';
 
-export const setFile = (blob, isPP = false) => (dispatch) => {
+export const setFile = (blob, isPP = false, filename = undefined) => (dispatch) => {
   const { uid } = firebase.auth().currentUser;
 
-  const name = `${new Date().getTime()}-easyCloud`;
+  const name = filename ?? `${new Date().getTime()}-easyCloud`;
 
   try {
     console.log('before upload task');

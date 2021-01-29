@@ -31,6 +31,7 @@ export default function Home() {
     else {
       toast.show(t('toast.home.preparing'), { type: 'success' });
       const blob = await getBlob(uri);
+      // TODO setFile 3 eme params is filename!
       dispatch(setFile(blob));
     }
   };
@@ -50,6 +51,7 @@ export default function Home() {
       const blob = await getBlob(uri);
 
       console.log('Constructing blobs done');
+      // TODO setFile 3 eme params is filename!
       dispatch(setFile(blob));
     }
   };
