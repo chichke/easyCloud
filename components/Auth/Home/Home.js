@@ -2,8 +2,8 @@ import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
 import { FlatList, Text, View } from 'react-native';
-import { FAB } from 'react-native-paper';
 import { useToast } from 'react-native-fast-toast';
+import { FAB } from 'react-native-paper';
 import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFiles } from '../../../helpers/firebase';
@@ -25,12 +25,12 @@ export default function Home() {
   const dispatch = useDispatch();
 
   const pickFile = async () => {
-    const { type, file } = await DocumentPicker.getDocumentAsync({ copyToCacheDirectory: false });
+    const { type, uri } = await DocumentPicker.getDocumentAsync({ copyToCacheDirectory: false });
     if (type === 'cancel') toast.show('User cancelled', { type: 'normal' });
     else {
-      dispatch(setFile(file));
-      console.log(file);
       toast.show('Preparing file for upload', { type: 'success' });
+      const blob = await getBlob(uri);
+      dispatch(setFile(blob));
     }
   };
 
@@ -76,17 +76,16 @@ export default function Home() {
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}
+        visible={!uploading}
         actions={[
           {
             icon: 'image',
             label: 'Image',
-            disabled: { uploading },
             onPress: () => pickImage(),
           },
           {
             icon: 'file',
             label: 'File',
-            disabled: { uploading },
             onPress: () => pickFile(),
           },
         ]}

@@ -1,19 +1,21 @@
+import { useNavigation } from '@react-navigation/native';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
-import { AntDesign, EvilIcons } from '@expo/vector-icons';
 import { getItem } from '../../../helpers/firebase';
 import getDate from '../../../helpers/getDate';
 import getFilename from '../../../helpers/getFilename';
 import humanFileSize from '../../../helpers/humanFileSize';
 import Loading from '../../Loading';
+import IconSwitcher from './IconSwitcher';
 import styles from './styles';
 
-export default function FileItem({ item }) {
+export default function FileItem({ item: itemRef }) {
   const [data, setData] = useState(undefined);
+  const { navigate } = useNavigation();
 
   const fetchData = async () => {
-    setData(await getItem(item));
+    setData(await getItem(itemRef));
   };
   useEffect(() => {
     fetchData();
@@ -25,14 +27,14 @@ export default function FileItem({ item }) {
   const created = getDate(data.timeCreated);
   const updated = getDate(data.updated);
   const filename = getFilename(data.fullPath);
+
+  const gotoDescription = () => {
+    navigate('File', { itemRef, data });
+  };
   return (
-    <TouchableOpacity style={styles.file}>
+    <TouchableOpacity style={styles.file} onPress={gotoDescription}>
       <View style={styles.iconContainer}>
-        {data.contentType.startsWith('image') ? (
-          <EvilIcons name="image" size={40} color="deepskyblue" style={styles.icon} />
-        ) : (
-          <AntDesign name="filetext1" size={30} color="deepskyblue" style={styles.icon} />
-        )}
+        <IconSwitcher mime={data.contentType} />
       </View>
 
       <View style={styles.restContainer}>

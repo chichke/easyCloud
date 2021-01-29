@@ -3,9 +3,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { ToastProvider } from 'react-native-fast-toast';
 import 'react-native-gesture-handler';
+import { enableScreens } from 'react-native-screens';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
-import Home from './components/Auth/Home/Home';
+import FileScreen from './components/Auth/Home/FileScreen';
+import HomeScreen from './components/Auth/Home/Home';
 import Profile from './components/Auth/Profile/Profile';
 import ScoreBoard from './components/Auth/ScoreBoard';
 import Settings from './components/Auth/Settings';
@@ -24,7 +27,10 @@ import UploadManager from './components/UploadManager';
 import firebase from './firebase';
 import store from './redux/store';
 
+enableScreens();
+
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const queryClient = new QueryClient();
 
@@ -59,6 +65,13 @@ export default function App() {
     </ToastProvider>
   );
 }
+
+export const Home = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'My home' }} />
+    <Stack.Screen name="File" component={FileScreen} />
+  </Stack.Navigator>
+);
 
 export const AuthStack = () => (
   <>

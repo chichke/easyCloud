@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -25,12 +25,14 @@ export default function ButtonWithText(props) {
     disabled: PropTypes.bool,
     title: PropTypes.string.isRequired,
     onPress: PropTypes.func.isRequired,
-    style: PropTypes.string,
-    styleText: PropTypes.string,
+    // eslint-disable-next-line react/forbid-prop-types
+    style: PropTypes.object,
+    // eslint-disable-next-line react/forbid-prop-types
+    styleText: PropTypes.object,
   };
 
   ButtonWithText.defaultProps = {
-    disabled: styles.disabled,
+    disabled: false,
     style: styles.container,
     styleText: styles.text,
   };

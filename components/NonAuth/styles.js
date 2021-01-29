@@ -1,4 +1,8 @@
 import { StyleSheet } from 'react-native';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
   container: {
@@ -30,7 +34,9 @@ export default StyleSheet.create({
   },
   image: {
     resizeMode: 'center',
-    width: 200,
+    maxWidth: 500,
+    width: wp(30),
+    height: hp(20),
   },
   text: {
     fontSize: 15,

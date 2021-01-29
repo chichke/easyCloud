@@ -41,6 +41,42 @@ export const selfData = () =>
       );
   });
 
+const resetUserPic = () => {
+  const { uid } = firebase.auth().currentUser;
+
+  const pp = `https://robohash.org/${uid}`;
+
+  return firebase.database().ref(`/users/${uid}/pp`).set(pp);
+};
+
+const getUserPic = () => {
+  const { uid } = firebase.auth().currentUser;
+
+  return firebase.database().ref(`/users/${uid}/pp`).once('value');
+};
+
+export const deleteLogic = async (itemRef) =>
+  // eslint-disable-next-line no-async-promise-executor
+  new Promise(async (resolve, reject) => {
+    const downloadUrl = await itemRef.getDownloadURL();
+    console.log('downloadUrl');
+    console.log(downloadUrl);
+    const userPic = await (await getUserPic()).val();
+
+    console.log(userPic);
+    if (userPic === downloadUrl && downloadUrl && userPic) await resetUserPic();
+
+    itemRef
+      .delete()
+      .then(() => {
+        resolve();
+        // File deleted successfully
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+
 export const getFiles = () => {
   const { uid } = firebase.auth().currentUser;
 

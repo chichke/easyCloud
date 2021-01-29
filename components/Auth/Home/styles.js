@@ -28,9 +28,6 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     borderBottomColor: 'lightgrey',
   },
-  icon: {
-    alignSelf: 'center',
-  },
   boldText: {
     fontSize: 15,
     fontWeight: 'bold',
