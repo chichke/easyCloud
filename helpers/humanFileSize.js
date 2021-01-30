@@ -8,6 +8,12 @@
  *
  * @return Formatted string.
  */
+
+function toFixedNumber(num, digits, base) {
+  const pow = base || 10 ** digits;
+  return Math.round(num * pow) / pow;
+}
+
 function humanFileSize(b, si = false, dp = 1) {
   const thresh = si ? 1000 : 1024;
   let bytes = b;
@@ -26,7 +32,7 @@ function humanFileSize(b, si = false, dp = 1) {
     u += 1;
   } while (Math.round(Math.abs(bytes) * r) / r >= thresh && u < units.length - 1);
 
-  return `${bytes.toFixed(dp)} ${units[u]}`;
+  return { val: toFixedNumber(bytes, 1), type: units[u] };
 }
 
 export default humanFileSize;

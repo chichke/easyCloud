@@ -1,11 +1,14 @@
+/* eslint-disable no-nested-ternary */
 import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { Dimensions, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { FAB } from 'react-native-paper';
+import ReactNativeParallaxHeader from 'react-native-parallax-header';
 import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
+import { CountUp } from 'use-count-up';
 import { getFiles } from '../../../helpers/firebase';
 import getBlob from '../../../helpers/getBlob';
 import humanFileSize from '../../../helpers/humanFileSize';
@@ -15,7 +18,43 @@ import Error from '../../Error';
 import Loading from '../../Loading';
 import { getFilesKey } from '../../queryKey';
 import FileItem from './FileItem';
-import styles from './styles';
+
+const { height: SCREEN_HEIGHT } = Dimensions.get('window');
+
+export const IS_IPHONE_X = SCREEN_HEIGHT === 812 || SCREEN_HEIGHT === 896;
+export const STATUS_BAR_HEIGHT = Platform.OS === 'ios' ? (IS_IPHONE_X ? 44 : 20) : 0;
+export const HEADER_HEIGHT = Platform.OS === 'ios' ? (IS_IPHONE_X ? 88 : 64) : 64;
+export const NAV_BAR_HEIGHT = HEADER_HEIGHT - STATUS_BAR_HEIGHT;
+const linearGrad = require('../../../assets/Wiretap.jpg');
+
+const s = StyleSheet.create({
+  navContainer: {
+    height: HEADER_HEIGHT,
+    marginHorizontal: 10,
+  },
+  statusBar: {
+    height: STATUS_BAR_HEIGHT,
+    backgroundColor: 'transparent',
+  },
+  navBar: {
+    height: NAV_BAR_HEIGHT,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    backgroundColor: 'transparent',
+  },
+  navBarContainer: {
+    flex: 1,
+  },
+  navBarcontentContainer: {
+    flexGrow: 1,
+  },
+  titleStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 18,
+  },
+});
 
 export default function Home() {
   // eslint-disable-next-line
@@ -68,16 +107,67 @@ export default function Home() {
 
   if (isError) return <Error error={error} />;
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.boldText}>{t('v.home.title')}</Text>
-      <FlatList
-        data={data}
-        renderItem={({ item }) => <FileItem item={item} reload={totalSize === 0} />}
-        keyExtractor={(item, index) => String(index)}
-      />
+  const FileList = () => data.map((value, index) => <FileItem item={value} key={String(index)} />);
 
-      <Text>{`${t('v.home.total')} ${humanFileSize(totalSize)}`}</Text>
+  const Title = () => {
+    const { val, type } = humanFileSize(totalSize);
+
+    return (
+      <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>EasyCloud</Text>
+        <View style={{ flexDirection: 'row', marginTop: 5 }}>
+          <Text style={{ color: 'white', fontSize: 20 }}>
+            <CountUp isCounting end={val} duration={1} />
+          </Text>
+          <Text style={{ color: 'white', fontSize: 20, marginLeft: 10 }}>{type}</Text>
+        </View>
+      </View>
+    );
+  };
+  const RenderNavBar = () => {
+    const { val, type } = humanFileSize(totalSize);
+
+    return (
+      <View style={s.navContainer}>
+        <View style={s.statusBar} />
+        <View style={s.navBar}>
+          <TouchableOpacity onPress={() => {}}>
+            <Text style={{ color: 'white', fontSize: 22, fontWeight: 'bold' }}>EasyCloud</Text>
+          </TouchableOpacity>
+          <View style={{ flexDirection: 'row' }}>
+            <Text style={{ color: 'white', fontSize: 20 }}>
+              <CountUp isCounting end={val} duration={1} />
+            </Text>
+            <Text style={{ color: 'white', fontSize: 20, marginLeft: 10 }}>{type}</Text>
+          </View>
+        </View>
+      </View>
+    );
+  };
+
+  return (
+    <>
+      <ReactNativeParallaxHeader
+        headerMinHeight={HEADER_HEIGHT}
+        headerMaxHeight={250}
+        extraScrollHeight={20}
+        alwaysShowTitle={false}
+        alwaysShowNavBar={false}
+        navbarColor="#E94057"
+        titleStyle={s.titleStyle}
+        title={Title()}
+        backgroundImage={linearGrad}
+        backgroundImageScale={1.2}
+        renderNavBar={RenderNavBar}
+        renderContent={FileList}
+        containerStyle={s.navBarContainer}
+        contentContainerStyle={s.navBarcontentContainer}
+        innerContainerStyle={s.navBarContainer}
+        scrollViewProps={{
+          onScrollBeginDrag: () => console.log('onScrollBeginDrag'),
+          onScrollEndDrag: () => console.log('onScrollEndDrag'),
+        }}
+      />
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}
@@ -96,6 +186,6 @@ export default function Home() {
         ]}
         onStateChange={onStateChange}
       />
-    </View>
+    </>
   );
 }

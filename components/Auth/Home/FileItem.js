@@ -27,8 +27,8 @@ export default function FileItem({ item: itemRef }) {
   }, [itemRef]);
 
   if (!data) return <Loading />;
-
-  const readableSize = humanFileSize(data.size);
+  const { val, type } = humanFileSize(data.size);
+  const readableSize = `${val} ${type}`;
   // eslint-disable-next-line
   const created = getDate(data.timeCreated);
   const updated = getDate(data.updated);

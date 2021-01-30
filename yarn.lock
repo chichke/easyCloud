@@ -6581,6 +6581,11 @@ react-native-paper@^4.7.1:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.3.1"
 
+react-native-parallax-header@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-parallax-header/-/react-native-parallax-header-1.1.4.tgz#5f4b072f69f3b24cf2035b3930981669cc6d2066"
+  integrity sha512-7RnuBaZondC49G85JKEJvYrELjbrb/42MB6z4WbTeiF58HRHi8dq2aNa1HUwVLe2DS9GGp7hyZ7RkeEZG1wuzA==
+
 react-native-reanimated@~1.13.0:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.13.2.tgz#1ae5457b24b4913d173a5a064bb28eae7783d293"
@@ -7830,6 +7835,18 @@ url-parse@^1.4.4:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-count-up@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/use-count-up/-/use-count-up-2.3.0.tgz#8e9a1972f62b580b8e78cb8645b7a45d81aeb695"
+  integrity sha512-lbOJKlaptDeUNp7dNWNDxBs389xkQmg2Z71aEV8aZhnP3UQjKod6q8DPhIfvqUo2g4cOdIa3nKIqrm2rJeBQPQ==
+  dependencies:
+    use-elapsed-time "^2.1.4"
+
+use-elapsed-time@^2.1.4:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/use-elapsed-time/-/use-elapsed-time-2.1.6.tgz#8ad0c0054a1ba7bf881540855b5eb2d60ff501be"
+  integrity sha512-6h6bY63oto1REUqcID3Goedgl5tVqWXsLzUSJ6EB9VprqZqnO5VDo1kkQqY/6V5Jc4Wu4XUgW3B8aDUHG2KRcA==
 
 use-subscription@^1.0.0:
   version "1.5.1"
