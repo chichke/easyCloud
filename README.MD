@@ -3,6 +3,7 @@
 ## Dev Installation
 
  **If you don't have expo installed** -> [Check out the doc](https://reactnative.dev/docs/environment-setup)
+ 
 *Once you have expo installed follow these steps:* 
 
 + **With [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable):**
