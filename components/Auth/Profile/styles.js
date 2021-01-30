@@ -17,7 +17,7 @@ export default StyleSheet.create({
     height: 200,
     borderRadius: 100,
     borderColor: 'gray',
-    borderWidth: 1,
+    borderWidth: 1.5,
     backgroundColor: 'lightgrey',
   },
   texts: {
