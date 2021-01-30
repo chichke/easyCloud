@@ -10,6 +10,7 @@ import { setFile } from '../../../redux/actions/uploadManager';
 import t from '../../../translations';
 import FilenameModal from './FilenameModal/FilenameModal';
 import HeaderWithList from './HeaderWithList';
+import styles from './FileOptionsModal/styles';
 
 export default function Home() {
   // eslint-disable-next-line
@@ -74,7 +75,7 @@ export default function Home() {
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}
-        fabStyle={{ backgroundColor: colors.primary }}
+        fabStyle={{ ...styles, backgroundColor: colors.primary }}
         visible={!uploading}
         actions={[
           {
