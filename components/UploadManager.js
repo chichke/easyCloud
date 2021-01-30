@@ -1,13 +1,13 @@
 import Feather from '@expo/vector-icons/Feather';
+import { useTheme } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { Dimensions, StyleSheet, TouchableOpacity, View } from 'react-native';
-import { useTheme } from '@react-navigation/native';
 import { useToast } from 'react-native-fast-toast';
+import * as Progress from 'react-native-progress';
 import { useQueryClient } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
-import * as Progress from 'react-native-progress';
 import firebase from '../firebase';
-import { addDownloadUrl, setPP } from '../helpers/firebase';
+import { setPP } from '../helpers/firebase';
 import { finish } from '../redux/actions/uploadManager';
 import t from '../translations';
 import { getFilesKey, selfDataKey } from './queryKey';
@@ -84,12 +84,9 @@ function UploadManager() {
         if (isPP) {
           await setPP(downloadURL);
           queryClient.invalidateQueries(selfDataKey);
-        } else addDownloadUrl(downloadURL);
-
-        console.log('File available at', downloadURL);
+        }
         queryClient.invalidateQueries(getFilesKey);
         toast.show(t('toast.up.successful'), { type: 'success' });
-        // TODO Add url data to firebase realtime DB
       })
       .catch((err) => console.log(err))
       .finally(() => {
@@ -100,7 +97,6 @@ function UploadManager() {
 
   useEffect(() => {
     if (!uploadTask) return;
-    console.log('.on');
     unsubscribe = uploadTask.on('state_changed', handleSnapshot, handleError, handleFinally);
   }, [uploadTask]);
 

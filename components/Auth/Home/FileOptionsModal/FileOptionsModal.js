@@ -59,7 +59,6 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
   const shareFile = async () => {
     try {
       const url = await itemRef.getDownloadURL();
-      console.log(url);
       const result = await Share.share(
         Platform.select({
           ios: { url },

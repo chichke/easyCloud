@@ -125,20 +125,6 @@ export const getItem = (itemRef) =>
       });
   });
 
-export const addDownloadUrl = (url) => {
-  const { uid } = firebase.auth().currentUser;
-
-  firebase
-    .database()
-    .ref(`/users/${uid}/files`)
-    .transaction((files) => {
-      if (files) {
-        return [...files, url];
-      }
-      return [url];
-    });
-};
-
 export const setPP = (url) => {
   const { uid } = firebase.auth().currentUser;
 
