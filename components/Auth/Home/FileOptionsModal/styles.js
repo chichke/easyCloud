@@ -34,6 +34,12 @@ export default StyleSheet.create({
     marginLeft: 10,
     fontWeight: 'bold',
   },
+  fab: {
+    height: 55,
+    width: 55,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   text: {
     fontSize: 15,
     marginLeft: 10,
