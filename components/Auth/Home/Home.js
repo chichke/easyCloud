@@ -1,6 +1,7 @@
 import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
+import { useTheme } from '@react-navigation/native';
 import { useToast } from 'react-native-fast-toast';
 import { FAB } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
@@ -14,6 +15,7 @@ export default function Home() {
   // eslint-disable-next-line
   const uploading = useSelector((state) => state.uploadManager.uploading);
   const files = useSelector((state) => state.file.files);
+  const { colors } = useTheme();
 
   const [state, setState] = React.useState({ open: false });
   const [isModalVisible, setIsModalVisible] = React.useState(false);
@@ -72,6 +74,7 @@ export default function Home() {
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}
+        fabStyle={{ backgroundColor: colors.primary }}
         visible={!uploading}
         actions={[
           {

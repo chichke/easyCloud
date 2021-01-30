@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
 import { useQuery } from 'react-query';
@@ -17,6 +17,7 @@ export default function Profile() {
   const { navigate } = useNavigation();
   const { email } = firebase.auth().currentUser;
   const dispatch = useDispatch();
+  const { colors } = useTheme();
 
   const query = useQuery(selfDataKey, selfData);
 
@@ -55,7 +56,7 @@ export default function Profile() {
             onPress={onEdit}
           />
           <Button
-            style={styles.button}
+            style={{ ...styles.button, borderColor: colors.primary }}
             styleText={styles.textButton}
             title={t('v.prof.signout')}
             onPress={signout}

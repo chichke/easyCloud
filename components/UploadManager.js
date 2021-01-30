@@ -1,9 +1,11 @@
 import Feather from '@expo/vector-icons/Feather';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { Dimensions, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 import { useToast } from 'react-native-fast-toast';
 import { useQueryClient } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
+import * as Progress from 'react-native-progress';
 import firebase from '../firebase';
 import { addDownloadUrl, setPP } from '../helpers/firebase';
 import { finish } from '../redux/actions/uploadManager';
@@ -12,13 +14,14 @@ import { getFilesKey, selfDataKey } from './queryKey';
 
 const styles = StyleSheet.create({
   container: { flex: 0.1 },
-  progress: { flex: 1, backgroundColor: 'red' },
   playpause: { position: 'absolute', left: '40%', backgroundColor: 'white', top: '20%' },
   cancel: { position: 'absolute', right: '40%', backgroundColor: 'white', top: '20%' },
 });
 
 function UploadManager() {
   const { uploadTask, isPP } = useSelector((state) => state.uploadManager);
+  const width = Math.round(Dimensions.get('window').width);
+  const { colors } = useTheme();
 
   const queryClient = useQueryClient();
   const toast = useToast();
@@ -105,7 +108,7 @@ function UploadManager() {
 
   return (
     <View style={styles.container}>
-      <View style={{ ...styles.progress, width: `${progress}%` }} />
+      <Progress.Bar progress={progress / 100} width={width} color={colors.primary} />
       <TouchableOpacity onPress={handlePlayPause} style={styles.playpause}>
         <Feather name={isRunning ? 'pause' : 'play'} size={20} />
       </TouchableOpacity>

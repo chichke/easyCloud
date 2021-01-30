@@ -1,5 +1,5 @@
 /* eslint-disable no-return-assign */
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import * as SplashScreenHelper from 'expo-splash-screen';
 import React, { useEffect, useState } from 'react';
 import Toast, { ToastProvider } from 'react-native-fast-toast';
@@ -13,6 +13,14 @@ import NoAuthStack from './navigation/NoAuthStack';
 import store from './redux/store';
 
 const queryClient = new QueryClient();
+
+const EasyCloudTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#E94057',
+  },
+};
 
 export default function App() {
   const [initializing, setInitializing] = useState(true);
@@ -43,7 +51,9 @@ export default function App() {
     <ToastProvider>
       <Provider store={store}>
         <QueryClientProvider client={queryClient}>
-          <NavigationContainer>{user ? <AuthStack /> : <NoAuthStack />}</NavigationContainer>
+          <NavigationContainer theme={EasyCloudTheme}>
+            {user ? <AuthStack /> : <NoAuthStack />}
+          </NavigationContainer>
         </QueryClientProvider>
       </Provider>
       <Toast ref={(ref) => (global.toast = ref)} placement="top" />
