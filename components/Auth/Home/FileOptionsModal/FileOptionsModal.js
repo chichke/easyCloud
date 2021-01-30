@@ -1,4 +1,5 @@
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
+import { useTheme } from '@react-navigation/native';
 import * as WebBrowser from 'expo-web-browser';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,15 +14,16 @@ import t from '../../../../translations';
 import { getFilesKey, selfDataKey } from '../../../queryKey';
 import styles from './styles';
 
-function ModalOptions({ iconName, title, onPress, color, size, textStyle }) {
+function ModalOptions({ iconName, title, onPress, size, textStyle }) {
+  const { colors } = useTheme();
   return (
     <View style={styles.row}>
       <TouchableOpacity style={styles.row} onPress={onPress}>
         <View style={styles.container}>
           {iconName === 'share-google' ? (
-            <EvilIcons name="share-google" size={40} color="deepskyblue" style={styles.icon} />
+            <EvilIcons name="share-google" size={40} color={colors.primary} style={styles.icon} />
           ) : (
-            <AntDesign name={iconName} size={size} color={color} style={styles.icon} />
+            <AntDesign name={iconName} size={size} color={colors.primary} style={styles.icon} />
           )}
         </View>
         <View style={styles.bigFlex}>
@@ -36,14 +38,12 @@ ModalOptions.propTypes = {
   iconName: PropTypes.string.isRequired,
   title: PropTypes.string,
   onPress: PropTypes.func.isRequired,
-  color: PropTypes.string,
   size: PropTypes.number,
   // eslint-disable-next-line react/forbid-prop-types
   textStyle: PropTypes.object,
 };
 
 ModalOptions.defaultProps = {
-  color: 'deepskyblue',
   size: widthPercentageToDP(8),
   title: '',
   textStyle: styles.text,
