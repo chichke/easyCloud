@@ -1,16 +1,22 @@
-import { StyleSheet } from 'react-native';
-import {
-  heightPercentageToDP as hp,
-  widthPercentageToDP as wp,
-} from 'react-native-responsive-screen';
+import { Dimensions, StyleSheet } from 'react-native';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
+const width = Math.round(Dimensions.get('window').width);
+const height = Math.round(Dimensions.get('window').height);
 
 export default StyleSheet.create({
   scrollView: { backgroundColor: 'white' },
-  container: {
-    flex: 1,
+  signUpContainer: {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
+    marginTop: hp(7),
+  },
+  signInContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    marginTop: hp(20),
   },
   inputContainer: {
     borderRadius: 15,
@@ -23,6 +29,11 @@ export default StyleSheet.create({
     color: 'black',
     fontSize: 18,
   },
+  test: {
+    width: width * 0.9,
+    height: height * 0.3,
+    backgroundColor: 'yellow',
+  },
   button: {
     borderWidth: 0.5,
     borderRadius: 15,
@@ -34,11 +45,18 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   forgetButton: { marginVertical: 20 },
-  image: {
-    resizeMode: 'center',
+  signUpImage: {
+    resizeMode: 'contain',
+    width: 300,
+    height: 100,
     maxWidth: 500,
-    width: wp(30),
-    height: hp(20),
+  },
+  signInImage: {
+    resizeMode: 'contain',
+    width: 300,
+    height: 100,
+    maxWidth: 500,
+    marginBottom: hp(5),
   },
   already: { marginVertical: 20 },
   text: {
