@@ -54,6 +54,7 @@
 		"auth/uid-already-exists": "L' uid fourni est déjà utilisé par un utilisateur existant. Chaque utilisateur doit avoir un uid unique.",
 		"auth/unauthorized-continue-uri": "Le domaine de l'URL de poursuite ne figure pas sur la liste blanche. Ajoutez le domaine à la liste blanche dans la console Firebase.",
 		"auth/user-not-found": "Il n'existe aucun enregistrement d'utilisateur correspondant à l'identifiant fourni",
+		"auth/weak-password": "Mot de passe trop faible",
 		"unknown": "Erreur inconnue"
 	},
 	"nav": {

@@ -1,7 +1,7 @@
+import { useTheme } from '@react-navigation/native';
 import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
-import { useTheme } from '@react-navigation/native';
 import { useToast } from 'react-native-fast-toast';
 import { FAB } from 'react-native-paper';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,8 +9,8 @@ import getBlob from '../../../helpers/getBlob';
 import { setFile } from '../../../redux/actions/uploadManager';
 import t from '../../../translations';
 import FilenameModal from './FilenameModal/FilenameModal';
-import HeaderWithList from './HeaderWithList';
 import styles from './FileOptionsModal/styles';
+import HeaderWithList from './HeaderWithList';
 
 export default function Home() {
   // eslint-disable-next-line
@@ -60,9 +60,6 @@ export default function Home() {
     if (cancelled) toast.show(t('toast.home.cancel'), { type: 'normal' });
     else {
       toast.show(t('toast.home.preparing'), { type: 'success' });
-      console.log('Constructing blobs');
-
-      console.log('Constructing blobs done');
       setBlob(await getBlob(uri));
       setIsModalVisible(true);
     }

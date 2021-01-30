@@ -46,11 +46,7 @@ export default function EditProfile() {
     if (cancelled) toast.show(t('toast.home.cancel'), { type: 'normal' });
     else {
       toast.show(t('toast.home.preparing'), { type: 'success' });
-      console.log('Constructing blobs');
       const blob = await getBlob(uri);
-
-      console.log('Constructing blobs done');
-      // TODO setFile 3 eme params is filename!
       dispatch(setFile(blob, true));
     }
   };

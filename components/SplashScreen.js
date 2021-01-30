@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
 
 export default function SplashScreen() {
   const onLoad = useCallback(() => {
-    console.log('onLoad');
     SplashScreenHelper.hideAsync();
   }, []);
 

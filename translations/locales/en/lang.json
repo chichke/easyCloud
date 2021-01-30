@@ -48,12 +48,13 @@
 		"auth/phone-number-already-exists": "The supplied phoneNumber is already in use by an existing user. Each user must have a unique phoneNumber.",
 		"auth/project-not-found": "",
 		"auth/requires-recent-login": "This type of data is sensitive, please login again",
-		"auth/reserved-claims": "",
+		"auth/reserved-claims": "One or more custom user claims provided to setCustomUserClaims() are reserved. For example, OIDC specific claims such as (sub, iat, iss, exp, aud, auth_time, etc.) should not be used as keys for custom claims.",
 		"auth/session-cookie-expired": "The provided Firebase session cookie has expired.",
 		"auth/session-cookie-revoked": "The Firebase session cookie has been revoked.",
 		"auth/uid-already-exists": "The supplied uid is already in use by an existing user. Each user must have a unique uid.",
 		"auth/unauthorized-continue-uri": "The domain of the pursuit URL is not whitelisted. Add the domain to the whitelist in the Firebase console.",
 		"auth/user-not-found": "There is no user record matching the username provided",
+		"auth/weak-password": "Too weak password",
 		"unknown": "Unknown error"
 	},
 	"nav": {

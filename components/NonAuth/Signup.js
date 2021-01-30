@@ -33,6 +33,7 @@ export default function Signup() {
         toast.show(t('toast.signup.success'), { type: 'success' });
       })
       .catch((err) => {
+        console.log(err.code);
         toast.show(transFire(err.code), { type: 'danger' });
         setLoading(false);
       });
