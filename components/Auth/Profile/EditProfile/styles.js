@@ -37,7 +37,7 @@ export default StyleSheet.create({
     fontSize: 18,
   },
   button: {
-    borderWidth: 0.5,
+    borderWidth: 1,
     borderRadius: 15,
     height: 55,
     width: 250,
@@ -48,7 +48,6 @@ export default StyleSheet.create({
   },
   textButton: {
     fontSize: 15,
-    color: 'rgba(22,39,61, 0.7)',
   },
   backButton: {
     position: 'absolute',
