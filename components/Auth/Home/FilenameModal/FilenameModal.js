@@ -13,7 +13,8 @@ export default function FilenameModal({ isModalVisible, onClose, onChangeFilenam
       style={styles.modal}
       isVisible={isModalVisible}
       backdropOpacity={0.2}
-      // onBackdropPress={onClose}
+      animationType="slide"
+      swipeDirection={['up', 'down']}
     >
       <View style={styles.modalContainer}>
         <Text style={styles.boldTitle}>Voulez-vous renommer le fichier ?</Text>

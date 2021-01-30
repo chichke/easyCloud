@@ -4,7 +4,7 @@ import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'reac
 import { useToast } from 'react-native-fast-toast';
 import firebase from '../../firebase';
 import t from '../../translations';
-import ForgetModal from './ForgetModal';
+import ForgetModal from './ForgetModal/ForgetModal';
 import styles from './styles';
 
 const logo = require('../../assets/easy-cloud.png');
@@ -15,7 +15,7 @@ export default function Signin() {
   const [pass, setPass] = useState('');
   const placeholderTextColor = '#8C8C8C';
   const { navigate } = useNavigation();
-  const [showModal, setShowModal] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const onSignin = async () => {
     try {
@@ -27,6 +27,11 @@ export default function Signin() {
   const onSignup = () => {
     navigate('Signup');
   };
+
+  const onClose = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <>
       <ScrollView style={{ backgroundColor: 'white' }}>
@@ -59,12 +64,12 @@ export default function Signin() {
           <TouchableOpacity style={styles.button} onPress={onSignup}>
             <Text style={styles.text}>{t('v.signin.signup')}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginVertical: 20 }} onPress={() => setShowModal(true)}>
+          <TouchableOpacity style={{ marginVertical: 20 }} onPress={() => setIsModalVisible(true)}>
             <Text style={styles.text}>{t('v.signin.forget')}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
-      {showModal && <ForgetModal setModalVisible={setShowModal} />}
+      <ForgetModal isModalVisible={isModalVisible} onClose={onClose} />
     </>
   );
 }
