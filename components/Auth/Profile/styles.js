@@ -4,10 +4,10 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    // alignSelf: "center",
+    backgroundColor: 'white',
   },
   picContainer: {
-    marginTop: 30,
+    marginTop: 60,
     alignItems: 'center',
   },
   profilePic: {

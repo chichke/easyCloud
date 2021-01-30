@@ -11,10 +11,6 @@ export const showSignupIcon = ({ color, size }) => (
 
 export const showHomeIcon = ({ color, size }) => <Feather name="home" color={color} size={size} />;
 
-export const showSettingsIcon = ({ color, size }) => (
-  <Feather name="settings" color={color} size={size} />
-);
-
 export const showProfileIcon = ({ color, size }) => (
   <Feather name="user" color={color} size={size} />
 );
