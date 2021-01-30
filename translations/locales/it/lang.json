@@ -74,6 +74,7 @@
 			"unknwon": "Errore sconosciuto"
 		},
 		"home": {
+			"alreadyExist": "Il nome del file esiste già!",
 			"cancel": "Utente cancellato",
 			"preparing": "Preparare il file per il caricamento",
 			"shared": "Condiviso con successo"
@@ -103,6 +104,7 @@
 				"img": "Immagine"
 			},
 			"modal": {
+				"alreadyused": "Nome del file già usato!",
 				"check": "Anteprima",
 				"delete": "Cancellare",
 				"save": "Registra",

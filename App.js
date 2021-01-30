@@ -1,7 +1,8 @@
+/* eslint-disable no-return-assign */
 import { NavigationContainer } from '@react-navigation/native';
 import * as SplashScreenHelper from 'expo-splash-screen';
 import React, { useEffect, useState } from 'react';
-import { ToastProvider } from 'react-native-fast-toast';
+import Toast, { ToastProvider } from 'react-native-fast-toast';
 import 'react-native-gesture-handler';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
@@ -45,6 +46,7 @@ export default function App() {
           <NavigationContainer>{user ? <AuthStack /> : <NoAuthStack />}</NavigationContainer>
         </QueryClientProvider>
       </Provider>
+      <Toast ref={(ref) => (global.toast = ref)} placement="top" />
     </ToastProvider>
   );
 }

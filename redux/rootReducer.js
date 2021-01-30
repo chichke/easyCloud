@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import fileSize from './reducers/fileSize';
+import file from './reducers/file';
 import uploadManager from './reducers/uploadManager';
 
 export default combineReducers({
   uploadManager,
-  fileSize,
+  file,
   // TODO Add reducers
 });

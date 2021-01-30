@@ -74,6 +74,7 @@
 			"unknwon": "Erreur inconnue"
 		},
 		"home": {
+			"alreadyExist": "Le nom de fichier existe déjà !",
 			"cancel": "Annulation...",
 			"preparing": "Préparation du fichier en vue de son upload",
 			"shared": "Partagé avec succès"
@@ -103,6 +104,7 @@
 				"img": "Image"
 			},
 			"modal": {
+				"alreadyused": "Nom de fichier déjà utilisé !",
 				"check": "Prévisualiser",
 				"delete": "Supprimer",
 				"save": "Enregistrer",

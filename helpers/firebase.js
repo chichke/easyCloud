@@ -1,5 +1,5 @@
 import firebase from '../firebase';
-import { resetFileSize } from '../redux/actions/fileSize';
+import { resetFilenames, resetFileSize } from '../redux/actions/file';
 import store from '../redux/store';
 import transFire from '../translations/firebase';
 
@@ -101,6 +101,8 @@ export const getFiles = () => {
   // TODO Dispatch setSize at 0
   const listRef = firebase.storage().ref(`users/${uid}/`);
   store.dispatch(resetFileSize());
+  store.dispatch(resetFilenames());
+
   return new Promise((resolve, reject) => {
     listRef
       .listAll()

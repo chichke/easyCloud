@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 
 export default function HeaderWithList() {
   const query = useQuery(getFilesKey, getFiles);
-  const totalSize = useSelector((state) => state.fileSize.fileSize);
+  const totalSize = useSelector((state) => state.file.fileSize);
 
   const { isLoading, isError, data, error } = query;
 

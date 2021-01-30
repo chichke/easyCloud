@@ -6,7 +6,7 @@ import { getItem } from '../../../helpers/firebase';
 import getDate from '../../../helpers/getDate';
 import getFilename from '../../../helpers/getFilename';
 import humanFileSize from '../../../helpers/humanFileSize';
-import { addFileSize } from '../../../redux/actions/fileSize';
+import { addFile, addFileSize } from '../../../redux/actions/file';
 import Loading from '../../Loading';
 import Modal from './FileOptionsModal/FileOptionsModal';
 import IconSwitcher from './IconSwitcher';
@@ -20,6 +20,7 @@ export default function FileItem({ item: itemRef }) {
   const fetchData = async () => {
     const item = await getItem(itemRef);
     setData(item);
+    dispatch(addFile(getFilename(item.fullPath)));
     dispatch(addFileSize(item.size));
   };
   useEffect(() => {

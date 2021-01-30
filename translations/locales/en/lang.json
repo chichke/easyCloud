@@ -74,6 +74,7 @@
 			"unknwon": "Unknown error"
 		},
 		"home": {
+			"alreadyExist": "Filename already exist!",
 			"cancel": "User cancelled",
 			"preparing": "Preparing file for upload",
 			"shared": "Successfuly shared"
@@ -103,6 +104,7 @@
 				"img": "Image"
 			},
 			"modal": {
+				"alreadyused": "Filename already used!",
 				"check": "Preview",
 				"delete": "Delete",
 				"save": "Download",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { CountUp } from 'use-count-up';
 import humanFileSize from '../../../helpers/humanFileSize';
 import { HEADER_HEIGHT, NAV_BAR_HEIGHT, STATUS_BAR_HEIGHT } from './uiValues';
@@ -33,9 +33,7 @@ const Header = (totalSize) => {
     <View style={styles.navContainer}>
       <View style={styles.statusBar} />
       <View style={styles.navBar}>
-        <TouchableOpacity onPress={() => {}}>
-          <Text style={styles.brand}>EasyCloud</Text>
-        </TouchableOpacity>
+        <Text style={styles.brand}>EasyCloud</Text>
         {val && (
           <View style={styles.row}>
             <Text style={styles.countUp}>

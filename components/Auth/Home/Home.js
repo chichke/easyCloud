@@ -13,12 +13,12 @@ import HeaderWithList from './HeaderWithList';
 export default function Home() {
   // eslint-disable-next-line
   const uploading = useSelector((state) => state.uploadManager.uploading);
+  const files = useSelector((state) => state.file.files);
 
   const [state, setState] = React.useState({ open: false });
   const [isModalVisible, setIsModalVisible] = React.useState(false);
   const [blob, setBlob] = React.useState(undefined);
   const onStateChange = ({ open }) => setState({ open });
-
   const toast = useToast();
   const dispatch = useDispatch();
 
@@ -28,13 +28,17 @@ export default function Home() {
   };
 
   const onChangeFilename = (filename) => {
-    dispatch(setFile(blob, false, filename));
-    setIsModalVisible(false);
+    if (files.includes(filename))
+      global.toast.show(t('toast.home.alreadyExist'), { type: 'warning' });
+    else {
+      dispatch(setFile(blob, false, filename));
+      setIsModalVisible(false);
+    }
   };
 
   const pickFile = async () => {
     const { type, uri } = await DocumentPicker.getDocumentAsync({ copyToCacheDirectory: false });
-    if (type === 'cancel') toast.show(t('toast.home.cancel'), { type: 'normal' });
+    if (type === 'cancel') toast.show(t('toast.home.cancel'), { type: 'normal', placement: 'top' });
     else {
       toast.show(t('toast.home.preparing'), { type: 'success' });
       setBlob(await getBlob(uri));
