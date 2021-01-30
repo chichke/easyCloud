@@ -35,9 +35,8 @@ export default function Signin() {
   return (
     <>
       <ScrollView style={styles.scrollView}>
-        <View style={styles.container}>
-          <Image source={logo} style={styles.image} />
-
+        <View style={styles.signInContainer}>
+          <Image source={logo} style={styles.signInImage} />
           <TextInput
             onChangeText={setMail}
             placeholder={t('v.forget.ph')}

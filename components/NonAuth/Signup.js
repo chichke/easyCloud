@@ -69,8 +69,8 @@ export default function Signup() {
   return (
     <>
       <ScrollView style={styles.scrollView}>
-        <View style={{ ...styles.container, marginTop: 60 }}>
-          <Image source={logo} style={styles.image} />
+        <View style={styles.signUpContainer}>
+          <Image source={logo} style={styles.signUpImage} />
 
           <TextInput
             placeholder={t('v.signup.fname')}
