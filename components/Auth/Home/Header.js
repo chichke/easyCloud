@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   sizeType: { color: 'white', fontSize: 20, marginLeft: 10 },
 });
 
-const RenderNavBar = (totalSize) => {
+const Header = (totalSize) => {
   const { val, type } = humanFileSize(totalSize);
 
   return (
@@ -36,15 +36,17 @@ const RenderNavBar = (totalSize) => {
         <TouchableOpacity onPress={() => {}}>
           <Text style={styles.brand}>EasyCloud</Text>
         </TouchableOpacity>
-        <View style={styles.row}>
-          <Text style={styles.countUp}>
-            <CountUp isCounting end={val} duration={1} />
-          </Text>
-          <Text style={styles.sizeType}>{type}</Text>
-        </View>
+        {val && (
+          <View style={styles.row}>
+            <Text style={styles.countUp}>
+              <CountUp isCounting end={val} duration={1} />
+            </Text>
+            <Text style={styles.sizeType}>{type}</Text>
+          </View>
+        )}
       </View>
     </View>
   );
 };
 
-export default RenderNavBar;
+export default Header;

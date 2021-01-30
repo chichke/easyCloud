@@ -10,20 +10,22 @@ const styles = StyleSheet.create({
   container: { justifyContent: 'center', alignItems: 'center' },
   sizeType: { color: 'white', fontSize: 20, marginLeft: 10 },
 });
-const Title = (totalSize) => {
+const HeaderTitle = (totalSize) => {
   const { val, type } = humanFileSize(totalSize);
 
   return (
     <View style={styles.container}>
       <Text style={styles.brand}>EasyCloud</Text>
-      <View style={styles.row}>
-        <Text style={styles.countUp}>
-          <CountUp isCounting end={val} duration={1} />
-        </Text>
-        <Text style={styles.sizeType}>{type}</Text>
-      </View>
+      {val && (
+        <View style={styles.row}>
+          <Text style={styles.countUp}>
+            <CountUp isCounting end={val} duration={1} />
+          </Text>
+          <Text style={styles.sizeType}>{type}</Text>
+        </View>
+      )}
     </View>
   );
 };
 
-export default Title;
+export default HeaderTitle;

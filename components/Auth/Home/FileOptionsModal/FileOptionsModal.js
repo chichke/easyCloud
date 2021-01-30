@@ -132,6 +132,7 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
       isVisible={isModalVisible}
       backdropOpacity={0.2}
       onBackdropPress={onClose}
+      animationType="slide"
     >
       <View style={styles.modalContainer}>
         <ModalOptions

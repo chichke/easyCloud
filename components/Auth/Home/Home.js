@@ -1,45 +1,18 @@
 import * as DocumentPicker from 'expo-document-picker';
 import * as ImagePicker from 'expo-image-picker';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { FAB } from 'react-native-paper';
-import ReactNativeParallaxHeader from 'react-native-parallax-header';
-import { useQuery } from 'react-query';
 import { useDispatch, useSelector } from 'react-redux';
-import { getFiles } from '../../../helpers/firebase';
 import getBlob from '../../../helpers/getBlob';
 import { setFile } from '../../../redux/actions/uploadManager';
 import t from '../../../translations';
-import Error from '../../Error';
-import Loading from '../../Loading';
-import { getFilesKey } from '../../queryKey';
-import FileList from './FileList';
 import FilenameModal from './FilenameModal/FilenameModal';
-import RenderNavBar from './Header';
-import Title from './HeaderTitle';
-import { HEADER_HEIGHT } from './uiValues';
-
-const linearGrad = require('../../../assets/Wiretap.jpg');
-
-const s = StyleSheet.create({
-  navBarContainer: {
-    flex: 1,
-  },
-  navBarcontentContainer: {
-    flexGrow: 1,
-  },
-  titleStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    fontSize: 18,
-  },
-});
+import HeaderWithList from './HeaderWithList';
 
 export default function Home() {
   // eslint-disable-next-line
   const uploading = useSelector((state) => state.uploadManager.uploading);
-  const totalSize = useSelector((state) => state.fileSize.fileSize);
 
   const [state, setState] = React.useState({ open: false });
   const [isModalVisible, setIsModalVisible] = React.useState(false);
@@ -87,35 +60,11 @@ export default function Home() {
     }
   };
 
-  const query = useQuery(getFilesKey, getFiles);
-
-  const { isLoading, isError, data, error } = query;
-
   const { open } = state;
-
-  if (isLoading) return <Loading />;
-
-  if (isError) return <Error error={error} />;
 
   return (
     <>
-      <ReactNativeParallaxHeader
-        headerMinHeight={HEADER_HEIGHT}
-        headerMaxHeight={250}
-        extraScrollHeight={20}
-        alwaysShowTitle={false}
-        alwaysShowNavBar={false}
-        navbarColor="#E94057"
-        titleStyle={s.titleStyle}
-        title={Title(totalSize)}
-        backgroundImage={linearGrad}
-        backgroundImageScale={1.2}
-        renderNavBar={() => RenderNavBar(totalSize)}
-        renderContent={() => FileList(data)}
-        containerStyle={s.navBarContainer}
-        contentContainerStyle={s.navBarcontentContainer}
-        innerContainerStyle={s.navBarContainer}
-      />
+      <HeaderWithList />
       <FAB.Group
         open={open}
         icon={open ? 'close' : 'plus'}
