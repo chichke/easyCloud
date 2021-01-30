@@ -111,6 +111,13 @@
 				"setpp": "Imposta come immagine del profilo",
 				"share": "Condividi"
 			},
+			"name": {
+				"confirm": "Ok",
+				"empty": "Campo vuoto",
+				"generate": "Casuale",
+				"newName": "Montagna.jpg",
+				"q": "Rinomina il file"
+			},
 			"share": {
 				"title": "Allegato"
 			},

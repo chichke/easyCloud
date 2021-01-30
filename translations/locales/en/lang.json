@@ -111,6 +111,13 @@
 				"setpp": "Set as profile picture",
 				"share": "Share"
 			},
+			"name": {
+				"confirm": "Ok",
+				"empty": "Empty field",
+				"generate": "Random",
+				"newName": "Mountain.jpg",
+				"q": "Please rename the file"
+			},
 			"share": {
 				"title": "Attachment"
 			},

@@ -111,6 +111,13 @@
 				"setpp": "Définir comme photo de profil",
 				"share": "Partager"
 			},
+			"name": {
+				"confirm": "Ok",
+				"empty": "Champ vide",
+				"generate": "Aléatoire",
+				"newName": "Montagne.jpg",
+				"q": "Veuillez renommer le fichier"
+			},
 			"share": {
 				"title": "Pièce-jointe"
 			},

@@ -1,7 +1,8 @@
 import firebase from '../firebase';
-import { resetFilenames, resetFileSize } from '../redux/actions/file';
+import { addFile, resetFiles } from '../redux/actions/file';
 import store from '../redux/store';
 import transFire from '../translations/firebase';
+import getFilename from './getFilename';
 
 const addUserMetadata = (formData) => {
   const { uid } = firebase.auth().currentUser;
@@ -98,10 +99,8 @@ export const deleteLogic = async (itemRef) =>
 export const getFiles = () => {
   const { uid } = firebase.auth().currentUser;
 
-  // TODO Dispatch setSize at 0
   const listRef = firebase.storage().ref(`users/${uid}/`);
-  store.dispatch(resetFileSize());
-  store.dispatch(resetFilenames());
+  store.dispatch(resetFiles());
 
   return new Promise((resolve, reject) => {
     listRef
@@ -121,6 +120,7 @@ export const getItem = (itemRef) =>
     itemRef
       .getMetadata()
       .then((metadata) => {
+        store.dispatch(addFile(itemRef.toString(), getFilename(metadata.fullPath), metadata.size));
         resolve(metadata);
         // TODO: Display the image on the UI
       })

@@ -1,4 +1,2 @@
-export const ADD_FILESIZE = 'ADD_FILESIZE';
-export const RESET_FILESIZE = 'RESET_FILESIZE';
-export const ADD_FILENAME = 'ADD_FILENAME';
-export const RESET_FILENAME = 'RESET_FILENAME';
+export const ADD_FILE = 'ADD_FILE';
+export const RESET_FILES = 'RESET_FILES';

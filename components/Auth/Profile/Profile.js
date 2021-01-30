@@ -5,7 +5,7 @@ import { useQuery } from 'react-query';
 import { useDispatch } from 'react-redux';
 import firebase from '../../../firebase';
 import { selfData } from '../../../helpers/firebase';
-import { resetFilenames, resetFileSize } from '../../../redux/actions/file';
+import { resetFiles } from '../../../redux/actions/file';
 import t from '../../../translations';
 import Button from '../../ButtonWithText';
 import Error from '../../Error';
@@ -21,8 +21,7 @@ export default function Profile() {
   const query = useQuery(selfDataKey, selfData);
 
   const signout = () => {
-    dispatch(resetFilenames());
-    dispatch(resetFileSize());
+    dispatch(resetFiles());
     firebase.auth().signOut();
   };
 

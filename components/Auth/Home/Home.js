@@ -28,7 +28,8 @@ export default function Home() {
   };
 
   const onChangeFilename = (filename) => {
-    if (files.includes(filename))
+    if (!filename) global.toast.show(t('v.home.name.empty'), { type: 'warning' });
+    else if (files.includes(filename))
       global.toast.show(t('toast.home.alreadyExist'), { type: 'warning' });
     else {
       dispatch(setFile(blob, false, filename));
