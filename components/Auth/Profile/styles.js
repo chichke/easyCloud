@@ -1,13 +1,15 @@
 import { StyleSheet } from 'react-native';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
+  scrollView: { backgroundColor: 'white' },
   container: {
     flex: 1,
     justifyContent: 'center',
-    // alignSelf: "center",
+    backgroundColor: 'white',
   },
   picContainer: {
-    marginTop: 30,
+    marginTop: hp(25),
     alignItems: 'center',
   },
   profilePic: {

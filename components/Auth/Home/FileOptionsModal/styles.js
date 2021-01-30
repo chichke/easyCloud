@@ -8,6 +8,12 @@ export default StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: 0,
   },
+  container: {
+    flex: 1,
+  },
+  bigFlex: {
+    flex: 8,
+  },
   modalContainer: {
     alignSelf: 'center',
     justifyContent: 'space-evenly',

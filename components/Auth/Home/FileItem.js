@@ -8,7 +8,7 @@ import getFilename from '../../../helpers/getFilename';
 import humanFileSize from '../../../helpers/humanFileSize';
 import { addFileSize } from '../../../redux/actions/fileSize';
 import Loading from '../../Loading';
-import Modal from './FileOptionsModal';
+import Modal from './FileOptionsModal/FileOptionsModal';
 import IconSwitcher from './IconSwitcher';
 import styles from './styles';
 

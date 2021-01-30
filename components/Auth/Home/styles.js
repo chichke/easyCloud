@@ -6,6 +6,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     marginTop: 25,
     marginHorizontal: 5,
+    backgroundColor: 'white',
   },
   file: {
     flexDirection: 'row',

@@ -12,6 +12,19 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
   },
+  picContainer: {
+    marginTop: hp(15),
+    alignItems: 'center',
+    paddingBottom: 20,
+  },
+  profilePic: {
+    width: 200,
+    height: 200,
+    borderRadius: 100,
+    borderColor: 'gray',
+    borderWidth: 1,
+    backgroundColor: 'lightgrey',
+  },
   inputContainer: {
     borderRadius: 15,
     height: 55,
@@ -33,16 +46,15 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  forgetButton: { marginVertical: 20 },
-  image: {
-    resizeMode: 'center',
-    maxWidth: 500,
-    width: wp(30),
-    height: hp(20),
-  },
-  already: { marginVertical: 20 },
-  text: {
+  textButton: {
     fontSize: 15,
     color: 'rgba(22,39,61, 0.7)',
+  },
+  backButton: {
+    position: 'absolute',
+    left: 25,
+    top: 55,
+    width: wp(8),
+    height: wp(8),
   },
 });

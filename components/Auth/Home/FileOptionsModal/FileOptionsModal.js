@@ -7,24 +7,24 @@ import { useToast } from 'react-native-fast-toast';
 import Modal from 'react-native-modal';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import { useQueryClient } from 'react-query';
-import { deleteLogic, setPP } from '../../../helpers/firebase';
-import getFilename from '../../../helpers/getFilename';
-import t from '../../../translations';
-import { getFilesKey, selfDataKey } from '../../queryKey';
-import styles from './modalStyles';
+import { deleteLogic, setPP } from '../../../../helpers/firebase';
+import getFilename from '../../../../helpers/getFilename';
+import t from '../../../../translations';
+import { getFilesKey, selfDataKey } from '../../../queryKey';
+import styles from './styles';
 
 function ModalOptions({ iconName, title, onPress, color, size, textStyle }) {
   return (
     <View style={styles.row}>
       <TouchableOpacity style={styles.row} onPress={onPress}>
-        <View style={{ flex: 1 }}>
+        <View style={styles.container}>
           {iconName === 'share-google' ? (
             <EvilIcons name="share-google" size={40} color="deepskyblue" style={styles.icon} />
           ) : (
             <AntDesign name={iconName} size={size} color={color} style={styles.icon} />
           )}
         </View>
-        <View style={{ flex: 8 }}>
+        <View style={styles.bigFlex}>
           <Text style={[styles.text, textStyle]}>{title}</Text>
         </View>
       </TouchableOpacity>

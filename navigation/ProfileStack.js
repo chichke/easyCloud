@@ -1,18 +1,16 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+import EditProfile from '../components/Auth/Profile/EditProfile/EditProfile';
 import Profile from '../components/Auth/Profile/Profile';
-import Settings from '../components/Auth/Settings';
 import t from '../translations';
 
 const Stack = createStackNavigator();
 
+const screenOptions = { title: t('nav.prof'), headerShown: false };
 const ProfileStack = () => (
-  <Stack.Navigator
-    initialRouteName="Profile"
-    screenOptions={{ title: t('nav.prof'), headerShown: false }}
-  >
+  <Stack.Navigator initialRouteName="Profile" screenOptions={screenOptions}>
     <Stack.Screen name="Profile" component={Profile} />
-    <Stack.Screen name="Settings" component={Settings} />
+    <Stack.Screen name="EditProfile" component={EditProfile} />
   </Stack.Navigator>
 );
 

@@ -5,8 +5,10 @@ import t from '../translations';
 
 const Stack = createStackNavigator();
 
+const screenOptions = { title: t('nav.home'), headerShown: false };
+
 const HomeStack = () => (
-  <Stack.Navigator screenOptions={{ title: t('nav.home'), headerShown: false }}>
+  <Stack.Navigator screenOptions={screenOptions}>
     <Stack.Screen name="Home" component={HomeScreen} />
   </Stack.Navigator>
 );

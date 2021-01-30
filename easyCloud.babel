@@ -12,7 +12,7 @@
     <preset_collections/>
     <framework>i18next</framework>
     <filename>easyCloud.babel</filename>
-    <source_root_dir>.</source_root_dir>
+    <source_root_dir/>
     <folder_node>
         <name/>
         <children>
@@ -34,11 +34,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -55,11 +55,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -76,11 +76,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -97,11 +97,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -118,11 +118,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -139,11 +139,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -160,11 +160,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -181,11 +181,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -202,11 +202,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -223,11 +223,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -244,11 +244,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -265,11 +265,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -286,11 +286,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -307,11 +307,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -328,11 +328,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -349,11 +349,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -370,11 +370,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -391,11 +391,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -412,11 +412,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -433,11 +433,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -454,11 +454,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -475,11 +475,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -496,11 +496,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -517,11 +517,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -538,11 +538,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -559,11 +559,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -580,11 +580,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -601,11 +601,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -622,11 +622,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -643,11 +643,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -664,11 +664,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -685,11 +685,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -706,11 +706,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -727,11 +727,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -748,11 +748,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -769,11 +769,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -790,11 +790,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -811,11 +811,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -832,11 +832,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -853,11 +853,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -874,11 +874,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -895,11 +895,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -916,11 +916,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -937,11 +937,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -958,11 +958,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -979,11 +979,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1000,11 +1000,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1021,11 +1021,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1042,11 +1042,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1063,11 +1063,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1084,11 +1084,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1105,11 +1105,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1126,11 +1126,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1148,15 +1148,15 @@
                                 <default_text/>
                                 <translations>
                                     <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
                                         <language>fr-FR</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
                                         <language>it-IT</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1169,15 +1169,15 @@
                                 <default_text/>
                                 <translations>
                                     <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
                                         <language>fr-FR</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
                                         <language>it-IT</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1190,15 +1190,15 @@
                                 <default_text/>
                                 <translations>
                                     <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
                                         <language>fr-FR</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
                                         <language>it-IT</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1211,15 +1211,15 @@
                                 <default_text/>
                                 <translations>
                                     <translation>
-                                        <language>en-US</language>
-                                        <approved>false</approved>
-                                    </translation>
-                                    <translation>
                                         <language>fr-FR</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
                                         <language>it-IT</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                    <translation>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -1244,11 +1244,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1265,11 +1265,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1288,14 +1288,14 @@
                                         <translations>
                                             <translation>
                                                 <language>fr-FR</language>
-                                                <approved>true</approved>
-                                            </translation>
-                                            <translation>
-                                                <language>en-US</language>
-                                                <approved>true</approved>
+                                                <approved>false</approved>
                                             </translation>
                                             <translation>
                                                 <language>it-IT</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1312,11 +1312,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1333,11 +1333,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1354,11 +1354,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1380,11 +1380,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1401,11 +1401,32 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
+                                                <language>it-IT</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
                                                 <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                    <concept_node>
+                                        <name>shared</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description/>
+                                        <comment/>
+                                        <default_text/>
+                                        <translations>
+                                            <translation>
+                                                <language>fr-FR</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
                                                 <language>it-IT</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1427,11 +1448,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1453,11 +1474,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1474,11 +1495,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1500,11 +1521,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1521,11 +1542,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1542,11 +1563,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1563,11 +1584,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1594,11 +1615,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1615,11 +1636,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1644,11 +1665,11 @@
                                                         <approved>false</approved>
                                                     </translation>
                                                     <translation>
-                                                        <language>en-US</language>
+                                                        <language>it-IT</language>
                                                         <approved>false</approved>
                                                     </translation>
                                                     <translation>
-                                                        <language>it-IT</language>
+                                                        <language>en-US</language>
                                                         <approved>false</approved>
                                                     </translation>
                                                 </translations>
@@ -1665,11 +1686,147 @@
                                                         <approved>false</approved>
                                                     </translation>
                                                     <translation>
+                                                        <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
                                                         <language>en-US</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                </translations>
+                                            </concept_node>
+                                        </children>
+                                    </folder_node>
+                                    <folder_node>
+                                        <name>modal</name>
+                                        <children>
+                                            <concept_node>
+                                                <name>check</name>
+                                                <definition_loaded>false</definition_loaded>
+                                                <description/>
+                                                <comment/>
+                                                <default_text/>
+                                                <translations>
+                                                    <translation>
+                                                        <language>fr-FR</language>
                                                         <approved>false</approved>
                                                     </translation>
                                                     <translation>
                                                         <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>en-US</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                </translations>
+                                            </concept_node>
+                                            <concept_node>
+                                                <name>delete</name>
+                                                <definition_loaded>false</definition_loaded>
+                                                <description/>
+                                                <comment/>
+                                                <default_text/>
+                                                <translations>
+                                                    <translation>
+                                                        <language>fr-FR</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>en-US</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                </translations>
+                                            </concept_node>
+                                            <concept_node>
+                                                <name>save</name>
+                                                <definition_loaded>false</definition_loaded>
+                                                <description/>
+                                                <comment/>
+                                                <default_text/>
+                                                <translations>
+                                                    <translation>
+                                                        <language>fr-FR</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>en-US</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                </translations>
+                                            </concept_node>
+                                            <concept_node>
+                                                <name>setpp</name>
+                                                <definition_loaded>false</definition_loaded>
+                                                <description/>
+                                                <comment/>
+                                                <default_text/>
+                                                <translations>
+                                                    <translation>
+                                                        <language>fr-FR</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>en-US</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                </translations>
+                                            </concept_node>
+                                            <concept_node>
+                                                <name>share</name>
+                                                <definition_loaded>false</definition_loaded>
+                                                <description/>
+                                                <comment/>
+                                                <default_text/>
+                                                <translations>
+                                                    <translation>
+                                                        <language>fr-FR</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>en-US</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                </translations>
+                                            </concept_node>
+                                        </children>
+                                    </folder_node>
+                                    <folder_node>
+                                        <name>share</name>
+                                        <children>
+                                            <concept_node>
+                                                <name>title</name>
+                                                <definition_loaded>false</definition_loaded>
+                                                <description/>
+                                                <comment/>
+                                                <default_text/>
+                                                <translations>
+                                                    <translation>
+                                                        <language>fr-FR</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>it-IT</language>
+                                                        <approved>false</approved>
+                                                    </translation>
+                                                    <translation>
+                                                        <language>en-US</language>
                                                         <approved>false</approved>
                                                     </translation>
                                                 </translations>
@@ -1688,22 +1845,17 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
                                     </concept_node>
-                                </children>
-                            </folder_node>
-                            <folder_node>
-                                <name>prof</name>
-                                <children>
                                     <concept_node>
-                                        <name>cog</name>
+                                        <name>total</name>
                                         <definition_loaded>false</definition_loaded>
                                         <description/>
                                         <comment/>
@@ -1714,15 +1866,20 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
                                     </concept_node>
+                                </children>
+                            </folder_node>
+                            <folder_node>
+                                <name>prof</name>
+                                <children>
                                     <concept_node>
                                         <name>edit</name>
                                         <definition_loaded>false</definition_loaded>
@@ -1735,7 +1892,28 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
+                                                <language>it-IT</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
                                                 <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                        </translations>
+                                    </concept_node>
+                                    <concept_node>
+                                        <name>signout</name>
+                                        <definition_loaded>false</definition_loaded>
+                                        <description/>
+                                        <comment/>
+                                        <default_text/>
+                                        <translations>
+                                            <translation>
+                                                <language>en-US</language>
+                                                <approved>false</approved>
+                                            </translation>
+                                            <translation>
+                                                <language>fr-FR</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
@@ -1761,11 +1939,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1782,11 +1960,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1803,11 +1981,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1829,11 +2007,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1850,11 +2028,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1871,11 +2049,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1892,11 +2070,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1913,11 +2091,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1934,11 +2112,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1955,11 +2133,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -1976,11 +2154,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2004,11 +2182,11 @@
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>en-US</language>
+                                        <language>it-IT</language>
                                         <approved>false</approved>
                                     </translation>
                                     <translation>
-                                        <language>it-IT</language>
+                                        <language>en-US</language>
                                         <approved>false</approved>
                                     </translation>
                                 </translations>
@@ -2028,11 +2206,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2049,11 +2227,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2070,11 +2248,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2096,11 +2274,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2117,11 +2295,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2138,11 +2316,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2164,11 +2342,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2185,11 +2363,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2211,11 +2389,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2232,11 +2410,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2253,11 +2431,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2279,11 +2457,11 @@
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>en-US</language>
+                                                <language>it-IT</language>
                                                 <approved>false</approved>
                                             </translation>
                                             <translation>
-                                                <language>it-IT</language>
+                                                <language>en-US</language>
                                                 <approved>false</approved>
                                             </translation>
                                         </translations>
@@ -2320,10 +2498,10 @@
             <file>translations/locales/fr</file>
         </translation_file>
         <translation_file>
-            <file>translations/locales/en</file>
+            <file>translations/locales/it</file>
         </translation_file>
         <translation_file>
-            <file>translations/locales/it</file>
+            <file>translations/locales/en</file>
         </translation_file>
     </translation_files>
     <editor_configuration>

@@ -68,7 +68,7 @@ export default function Signup() {
 
   return (
     <>
-      <ScrollView style={{ backgroundColor: 'white' }}>
+      <ScrollView style={styles.scrollView}>
         <View style={{ ...styles.container, marginTop: 60 }}>
           <Image source={logo} style={styles.image} />
 
@@ -127,7 +127,7 @@ export default function Signup() {
             onChangeText={setConfirm}
             value={confirm}
           />
-          <TouchableOpacity style={{ marginVertical: 20 }} onPress={onSignin}>
+          <TouchableOpacity style={styles.already} onPress={onSignin}>
             <Text style={styles.text}>{t('v.signup.already')}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button} onPress={onSignup}>

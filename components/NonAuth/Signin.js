@@ -29,7 +29,7 @@ export default function Signin() {
   };
   return (
     <>
-      <ScrollView style={{ backgroundColor: 'white' }}>
+      <ScrollView style={styles.scrollView}>
         <View style={styles.container}>
           <Image source={logo} style={styles.image} />
 
@@ -59,7 +59,7 @@ export default function Signin() {
           <TouchableOpacity style={styles.button} onPress={onSignup}>
             <Text style={styles.text}>{t('v.signin.signup')}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{ marginVertical: 20 }} onPress={() => setShowModal(true)}>
+          <TouchableOpacity style={styles.forgetButton} onPress={() => setShowModal(true)}>
             <Text style={styles.text}>{t('v.signin.forget')}</Text>
           </TouchableOpacity>
         </View>

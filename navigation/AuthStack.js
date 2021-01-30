@@ -8,19 +8,13 @@ import ProfileStack from './ProfileStack';
 
 const Tab = createBottomTabNavigator();
 
+const homeOpt = { tabBarIcon: showHomeIcon, tabBarLabel: t('nav.home') };
+const profileOpt = { tabBarIcon: showProfileIcon, tabBarLabel: t('nav.prof') };
 const AuthStack = () => (
   <>
     <Tab.Navigator initialRouteName="Home" lazy={false}>
-      <Tab.Screen
-        name="Home"
-        component={HomeStack}
-        options={{ tabBarIcon: showHomeIcon, tabBarLabel: t('nav.home') }}
-      />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileStack}
-        options={{ tabBarIcon: showProfileIcon, tabBarLabel: t('nav.prof') }}
-      />
+      <Tab.Screen name="Home" component={HomeStack} options={homeOpt} />
+      <Tab.Screen name="Profile" component={ProfileStack} options={profileOpt} />
     </Tab.Navigator>
     <UploadManager />
   </>

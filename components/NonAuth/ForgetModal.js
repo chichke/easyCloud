@@ -76,7 +76,7 @@ export default function ForgetModal({ setModalVisible }) {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <TouchableOpacity
-              style={{ ...styles.openButton }}
+              style={styles.openButton}
               onPress={() => {
                 setModalVisible(false);
               }}

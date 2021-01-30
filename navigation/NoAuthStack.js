@@ -7,18 +7,12 @@ import t from '../translations';
 
 const Tab = createBottomTabNavigator();
 
+const SigninOpt = { tabBarIcon: showLoginIcon, tabBarLabel: t('nav.login') };
+const SignupOpt = { tabBarIcon: showSignupIcon, tabBarLabel: t('nav.signup') };
 const NoAuthStack = () => (
   <Tab.Navigator initialRouteName="Login" lazy={false}>
-    <Tab.Screen
-      name="Login"
-      component={Signin}
-      options={{ tabBarIcon: showLoginIcon, tabBarLabel: t('nav.login') }}
-    />
-    <Tab.Screen
-      name="Signup"
-      component={Signup}
-      options={{ tabBarIcon: showSignupIcon, tabBarLabel: t('nav.signup') }}
-    />
+    <Tab.Screen name="Login" component={Signin} options={SigninOpt} />
+    <Tab.Screen name="Signup" component={Signup} options={SignupOpt} />
   </Tab.Navigator>
 );
 

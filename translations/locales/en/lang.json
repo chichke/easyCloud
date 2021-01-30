@@ -114,8 +114,8 @@
 			"total": "Total:"
 		},
 		"prof": {
-			"cog": "Settings",
-			"edit": "Edit profile"
+			"edit": "Edit profile",
+			"signout": "Signout"
 		},
 		"signin": {
 			"forget": "Forgot your password ?",
