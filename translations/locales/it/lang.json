@@ -2,6 +2,7 @@
 	"fire": {
 		"auth/claims-too-large": "Il payload delle attestazioni fornito a setCustomUserClaims () supera la dimensione massima consentita di 1000 byte.",
 		"auth/email-already-exists": "L'email fornita è già utilizzata da un utente esistente. Ogni utente deve avere un'e-mail univoca.",
+		"auth/email-already-in-use": "Posta già in uso da un altro utente",
 		"auth/id-token-expired": "Il token ID Firebase fornito è scaduto.",
 		"auth/id-token-revoked": "Il token ID Firebase è stato revocato.",
 		"auth/insufficient-permission": "",
@@ -46,6 +47,7 @@
 		"auth/operation-not-allowed": "",
 		"auth/phone-number-already-exists": "",
 		"auth/project-not-found": "",
+		"auth/requires-recent-login": "Questo tipo di dati è sensibile, si prega di effettuare nuovamente il login",
 		"auth/reserved-claims": "",
 		"auth/session-cookie-expired": "",
 		"auth/session-cookie-revoked": "",
@@ -114,8 +116,11 @@
 			"total": "Totale :"
 		},
 		"prof": {
+			"allempty": "Uno dei campi deve essere impostato",
 			"edit": "Modifica profilo",
-			"signout": "Logout"
+			"signout": "Logout",
+			"success": "Profilo aggiornato!",
+			"validate": "Aggiornamento"
 		},
 		"signin": {
 			"forget": "Hai dimenticato la tua password?",
@@ -127,7 +132,7 @@
 			"confirm": "Conferma la password",
 			"fname": "Nome",
 			"lname": "Nome",
-			"mail": "E-mail",
+			"mail": "Mail",
 			"pass": "Password",
 			"phone": "Telefono",
 			"signup": "Registra"

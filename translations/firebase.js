@@ -2,6 +2,10 @@ import t from './index';
 
 const transFire = (code) => {
   switch (code) {
+    case 'auth/email-already-in-use':
+      return t(`fire.${code}`);
+    case 'auth/requires-recent-login':
+      return t(`fire.${code}`);
     case 'auth/user-not-found':
       return t(`fire.${code}`);
     case 'auth/unauthorized-continue-uri':

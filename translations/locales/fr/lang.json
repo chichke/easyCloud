@@ -2,6 +2,7 @@
 	"fire": {
 		"auth/claims-too-large": "La charge utile des revendications fournie à setCustomUserClaims() dépasse la taille maximale autorisée de 1 000 octets.",
 		"auth/email-already-exists": "L'e-mail fourni est déjà utilisé par un utilisateur existant. Chaque utilisateur doit avoir un e-mail unique.",
+		"auth/email-already-in-use": "Mail déjà utilisé par un autre utilisateur",
 		"auth/id-token-expired": "Le jeton d'ID Firebase fourni a expiré.",
 		"auth/id-token-revoked": "Le jeton Firebase ID a été révoqué.",
 		"auth/insufficient-permission": "Les informations d'identification utilisées pour initialiser le SDK Admin ne disposent pas des autorisations nécessaires pour accéder à la ressource d'authentification demandée. Reportez-vous à Configurer un projet Firebase pour obtenir de la documentation sur la manière de générer des informations d'identification avec les autorisations appropriées et de l'utiliser pour authentifier les SDK d'administration.",
@@ -46,6 +47,7 @@
 		"auth/operation-not-allowed": "Le fournisseur de connexion fourni est désactivé pour votre projet Firebase. Activez -le dans la section Méthode de connexion de la console Firebase.",
 		"auth/phone-number-already-exists": "Le phoneNumber fourni est déjà utilisé par un utilisateur existant. Chaque utilisateur doit avoir un phoneNumber unique.",
 		"auth/project-not-found": "Aucun projet Firebase n'a été trouvé pour les informations d'identification utilisées pour initialiser les SDK Admin. Reportez-vous à Configurer un projet Firebase pour obtenir de la documentation sur la façon de générer des informations d'identification pour votre projet et de l'utiliser pour authentifier les SDK d'administration.",
+		"auth/requires-recent-login": "Ce type de données est sensible, veuillez vous connecter à nouveau",
 		"auth/reserved-claims": "Une ou plusieurs revendications utilisateur personnalisées fournies à setCustomUserClaims() sont réservées. Par exemple, les revendications spécifiques OIDC telles que (sub, iat, iss, exp, aud, auth_time, etc.) ne doivent pas être utilisées comme clés pour les revendications personnalisées.",
 		"auth/session-cookie-expired": "Le cookie de session Firebase fourni a expiré.",
 		"auth/session-cookie-revoked": "Le cookie de session Firebase a été révoqué.",
@@ -114,8 +116,11 @@
 			"total": "Total :"
 		},
 		"prof": {
+			"allempty": "Un des champs doit être défini",
 			"edit": "Editer le profil",
-			"signout": "Déconnexion"
+			"signout": "Déconnexion",
+			"success": "Profil mis à jour !",
+			"validate": "Mettre à jour"
 		},
 		"signin": {
 			"forget": "Mot de passe oublié ?",
@@ -127,7 +132,7 @@
 			"confirm": "Confirmer mot de passe",
 			"fname": "Prénom",
 			"lname": "Nom",
-			"mail": "E-mail",
+			"mail": "Mail",
 			"pass": "Mot de passe",
 			"phone": "Téléphone",
 			"signup": "S'inscrire"

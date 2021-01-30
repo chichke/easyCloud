@@ -10,6 +10,21 @@ const addUserMetadata = (formData) => {
 
   firebase.database().ref(`/users/${uid}`).set({ first, last, phone, pp });
 };
+
+export const mailChange = (mail) => firebase.auth().currentUser.updateEmail(mail);
+
+export const lnameChange = (lname) => {
+  const { uid } = firebase.auth().currentUser;
+
+  return firebase.database().ref(`/users/${uid}/last`).set(lname);
+};
+
+export const fnameChange = (fname) => {
+  const { uid } = firebase.auth().currentUser;
+
+  return firebase.database().ref(`/users/${uid}/first`).set(fname);
+};
+
 export const createAccount = (formData) =>
   new Promise((resolve, reject) => {
     const { mail, pass } = formData;

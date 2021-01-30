@@ -2,6 +2,7 @@
 	"fire": {
 		"auth/claims-too-large": "The claims payload supplied to setCustomUserClaims () exceeds the maximum allowable size of 1000 bytes.",
 		"auth/email-already-exists": "The email provided is already in use by an existing user. Each user must have a unique email.",
+		"auth/email-already-in-use": "Mail already in use by another user",
 		"auth/id-token-expired": "The provided Firebase ID token has expired.",
 		"auth/id-token-revoked": "The Firebase ID token has been revoked.",
 		"auth/insufficient-permission": "",
@@ -46,6 +47,7 @@
 		"auth/operation-not-allowed": "The provided connection provider is disabled for your Firebase project. Enable it in the Connection method section of the Firebase console.",
 		"auth/phone-number-already-exists": "The supplied phoneNumber is already in use by an existing user. Each user must have a unique phoneNumber.",
 		"auth/project-not-found": "",
+		"auth/requires-recent-login": "This type of data is sensitive, please login again",
 		"auth/reserved-claims": "",
 		"auth/session-cookie-expired": "The provided Firebase session cookie has expired.",
 		"auth/session-cookie-revoked": "The Firebase session cookie has been revoked.",
@@ -114,8 +116,11 @@
 			"total": "Total:"
 		},
 		"prof": {
+			"allempty": "One of the field must be set",
 			"edit": "Edit profile",
-			"signout": "Signout"
+			"signout": "Signout",
+			"success": "Profile updated!",
+			"validate": "Update"
 		},
 		"signin": {
 			"forget": "Forgot your password ?",
@@ -127,7 +132,7 @@
 			"confirm": "Confirm password",
 			"fname": "First Name",
 			"lname": "Last Name",
-			"mail": "e-mail",
+			"mail": "Mail",
 			"pass": "Password",
 			"phone": "Phone",
 			"signup": "Register"
