@@ -102,7 +102,8 @@
 		"home": {
 			"fab": {
 				"file": "File",
-				"img": "Immagine"
+				"img": "Immagine",
+				"empty": "Nessun file ancora aggiunto, fare clic sul pulsante più per caricare un'immagine/file"
 			},
 			"modal": {
 				"alreadyused": "Nome del file già usato!",

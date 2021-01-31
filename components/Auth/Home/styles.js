@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
+
+const width = Math.round(Dimensions.get('window').width);
 
 export default StyleSheet.create({
   container: {
@@ -7,6 +9,13 @@ export default StyleSheet.create({
     marginTop: 25,
     marginHorizontal: 5,
     backgroundColor: 'white',
+  },
+  emptyList: {
+    flex: 1,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: width * 0.8,
   },
   file: {
     flexDirection: 'row',
@@ -40,5 +49,9 @@ export default StyleSheet.create({
   subtitle: {
     fontSize: 13,
     color: 'rgba(22,39,61, 0.7)',
+  },
+  emptyListText: {
+    fontSize: 15,
+    textAlign: 'center',
   },
 });

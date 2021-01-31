@@ -78,7 +78,10 @@ export default function Signup() {
 
   return (
     <>
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' && 'padding'}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' && 'padding'}
+        style={styles.KeyboardAvoidingView}
+      >
         <ScrollView style={styles.scrollView}>
           <View style={styles.signUpContainer}>
             <Image source={logo} style={styles.signUpImage} />

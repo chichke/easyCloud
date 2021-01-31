@@ -6,6 +6,7 @@ const height = Math.round(Dimensions.get('window').height);
 
 export default StyleSheet.create({
   scrollView: { backgroundColor: 'white' },
+  KeyboardAvoidingView: { flex: 1 },
   signUpContainer: {
     alignItems: 'center',
     justifyContent: 'center',
