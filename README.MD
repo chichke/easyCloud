@@ -23,7 +23,7 @@ npm start
 
 **EasyCloud** is a file hosting service powered by Firebase, the app is available in **French**, **English** and **Italian**.
 
-**Check it out now** [here]()
+**Check it out now** [here](https://expo.io/@franki/projects/EASY_CLOUD)
 
 ## Library used in this project 
 
