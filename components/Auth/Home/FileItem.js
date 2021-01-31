@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
+import firebase from '../../../firebase';
 import { getItem } from '../../../helpers/firebase';
 import getDate from '../../../helpers/getDate';
 import getFilename from '../../../helpers/getFilename';
@@ -16,20 +17,17 @@ export default function FileItem({ item: itemRef }) {
   const [data, setData] = useState(undefined);
   const [isModalVisible, setIsModalVisible] = React.useState(false);
   const dispatch = useDispatch();
+  const { uid } = firebase.auth().currentUser;
 
   const fetchData = async () => {
     const item = await getItem(itemRef);
     setData(item);
   };
 
-  const cleanUp = () => {
-    dispatch(resetFiles());
-  };
-
   useEffect(() => {
     fetchData();
-    return cleanUp();
-  }, [itemRef]);
+    return dispatch(resetFiles());
+  }, [itemRef, uid]);
 
   if (!data) return <Loading />;
   const { val, type } = humanFileSize(data.size);

@@ -95,7 +95,7 @@ export const getFiles = () => {
   const { uid } = firebase.auth().currentUser;
 
   const listRef = firebase.storage().ref(`users/${uid}/`);
-  store.dispatch(resetFiles());
+  store.dispatch(resetFiles);
 
   return new Promise((resolve, reject) => {
     listRef
@@ -115,6 +115,7 @@ export const getItem = (itemRef) =>
     itemRef
       .getMetadata()
       .then((metadata) => {
+        console.log('getItem');
         store.dispatch(addFile(itemRef.toString(), getFilename(metadata.fullPath), metadata.size));
         resolve(metadata);
         // TODO: Display the image on the UI

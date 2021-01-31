@@ -32,6 +32,7 @@ export default function HeaderWithList() {
   const query = useQuery(getFilesKey, getFiles);
   const totalSize = useSelector((state) => state.file.fileSize);
 
+  console.log(totalSize);
   const { isLoading, isError, data, error } = query;
 
   if (isLoading) return <Loading />;
