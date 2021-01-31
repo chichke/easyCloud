@@ -3,7 +3,10 @@
     "name": "EASY_CLOUD",
     "slug": "EASY_CLOUD",
     "version": "1.0.0",
+    "privacy": "public",
     "orientation": "portrait",
+    "description": "EasyCloud hosting service app",
+    "githubUrl": "https://github.com/chichke/easyCloud",
     "icon": "./assets/square-easy-cloud.png",
     "splash": {
       "image": "./assets/easy-cloud.png",
@@ -17,9 +20,13 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.epitech.easycloud",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.epitech.easycloud",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
