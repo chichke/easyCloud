@@ -1,6 +1,15 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { Image, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {
+  Image,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { useToast } from 'react-native-fast-toast';
 import { createAccount } from '../../helpers/firebase';
 import t from '../../translations';
@@ -69,73 +78,75 @@ export default function Signup() {
 
   return (
     <>
-      <ScrollView style={styles.scrollView}>
-        <View style={styles.signUpContainer}>
-          <Image source={logo} style={styles.signUpImage} />
+      <KeyboardAvoidingView behavior={Platform.OS === 'ios' && 'padding'}>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.signUpContainer}>
+            <Image source={logo} style={styles.signUpImage} />
 
-          <TextInput
-            placeholder={t('v.signup.fname')}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.inputContainer}
-            autoCorrect={false}
-            onChangeText={setFirst}
-            value={first}
-          />
-          <TextInput
-            placeholder={t('v.signup.lname')}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.inputContainer}
-            autoCorrect={false}
-            onChangeText={setLast}
-            value={last}
-          />
-          <TextInput
-            placeholder={t('v.signup.phone')}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.inputContainer}
-            autoCorrect={false}
-            keyboardType="phone-pad"
-            onChangeText={setPhone}
-            value={phone}
-          />
-          <TextInput
-            placeholder={t('v.signup.mail')}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.inputContainer}
-            keyboardType="email-address"
-            autoCorrect={false}
-            autoCapitalize="none"
-            onChangeText={setMail}
-            value={mail}
-          />
-          <TextInput
-            placeholder={t('v.signup.pass')}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.inputContainer}
-            autoCorrect={false}
-            autoCapitalize="none"
-            secureTextEntry
-            onChangeText={setPass}
-            value={pass}
-          />
-          <TextInput
-            placeholder={t('v.signup.confirm')}
-            placeholderTextColor={placeholderTextColor}
-            style={styles.inputContainer}
-            autoCorrect={false}
-            autoCapitalize="none"
-            secureTextEntry
-            onChangeText={setConfirm}
-            value={confirm}
-          />
-          <TouchableOpacity style={styles.already} onPress={onSignin}>
-            <Text style={styles.text}>{t('v.signup.already')}</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={onSignup}>
-            <Text style={styles.text}>{t('v.signup.signup')}</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
+            <TextInput
+              placeholder={t('v.signup.fname')}
+              placeholderTextColor={placeholderTextColor}
+              style={styles.inputContainer}
+              autoCorrect={false}
+              onChangeText={setFirst}
+              value={first}
+            />
+            <TextInput
+              placeholder={t('v.signup.lname')}
+              placeholderTextColor={placeholderTextColor}
+              style={styles.inputContainer}
+              autoCorrect={false}
+              onChangeText={setLast}
+              value={last}
+            />
+            <TextInput
+              placeholder={t('v.signup.phone')}
+              placeholderTextColor={placeholderTextColor}
+              style={styles.inputContainer}
+              autoCorrect={false}
+              keyboardType="phone-pad"
+              onChangeText={setPhone}
+              value={phone}
+            />
+            <TextInput
+              placeholder={t('v.signup.mail')}
+              placeholderTextColor={placeholderTextColor}
+              style={styles.inputContainer}
+              keyboardType="email-address"
+              autoCorrect={false}
+              autoCapitalize="none"
+              onChangeText={setMail}
+              value={mail}
+            />
+            <TextInput
+              placeholder={t('v.signup.pass')}
+              placeholderTextColor={placeholderTextColor}
+              style={styles.inputContainer}
+              autoCorrect={false}
+              autoCapitalize="none"
+              secureTextEntry
+              onChangeText={setPass}
+              value={pass}
+            />
+            <TextInput
+              placeholder={t('v.signup.confirm')}
+              placeholderTextColor={placeholderTextColor}
+              style={styles.inputContainer}
+              autoCorrect={false}
+              autoCapitalize="none"
+              secureTextEntry
+              onChangeText={setConfirm}
+              value={confirm}
+            />
+            <TouchableOpacity style={styles.already} onPress={onSignin}>
+              <Text style={styles.text}>{t('v.signup.already')}</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={onSignup}>
+              <Text style={styles.text}>{t('v.signup.signup')}</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </>
   );
 }
