@@ -62,7 +62,7 @@ export default function FileOptionsModal({ isModalVisible, onClose, itemRef, dat
       const result = await Share.share(
         Platform.select({
           ios: { url },
-          android: { title: t('v.home.share.title'), content: url },
+          android: { title: t('v.home.share.title'), message: url },
         })
       );
       if (result.action === Share.sharedAction) {
