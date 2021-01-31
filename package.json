@@ -31,6 +31,7 @@
     "i18n-js": "^3.8.0",
     "immer": "^8.0.1",
     "moment": "^2.29.1",
+    "moment-timezone": "^0.5.32",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
     "prop-types": "^15.7.2",
