@@ -26,12 +26,12 @@
       "package": "com.epitech.easycloud",
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/square-easy-cloud.jpg",
+        "foregroundImage": "./assets/square-easy-cloud.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./assets/square-easy-cloud.jpg"
+      "favicon": "./assets/square-easy-cloud.png"
     }
   }
 }
