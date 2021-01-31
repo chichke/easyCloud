@@ -115,7 +115,6 @@ export const getItem = (itemRef) =>
     itemRef
       .getMetadata()
       .then((metadata) => {
-        console.log('getItem');
         store.dispatch(addFile(itemRef.toString(), getFilename(metadata.fullPath), metadata.size));
         resolve(metadata);
         // TODO: Display the image on the UI
