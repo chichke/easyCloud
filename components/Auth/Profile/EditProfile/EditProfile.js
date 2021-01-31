@@ -60,6 +60,7 @@ export default function EditProfile() {
       if (_fname) await fnameChange(_fname);
 
       toast.show(t('v.prof.success'), { type: 'success' });
+      goBack();
     } catch (err) {
       console.log(err.code);
       toast.show(transFire(err.code), { type: 'danger' });
