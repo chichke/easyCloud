@@ -11,12 +11,10 @@ import {
   View,
 } from 'react-native';
 import { useToast } from 'react-native-fast-toast';
-import { useQueryClient } from 'react-query';
 import { createAccount } from '../../helpers/firebase';
 import t from '../../translations';
 import transFire from '../../translations/firebase';
 import Loading from '../Loading';
-import { getFilesKey, selfDataKey } from '../queryKey';
 import schema from './Schema';
 import styles from './styles';
 
@@ -33,11 +31,8 @@ export default function Signup() {
   const [confirm, setConfirm] = useState('');
   const placeholderTextColor = '#8C8C8C';
   const { navigate } = useNavigation();
-  const queryClient = useQueryClient();
 
   const onSignin = () => {
-    queryClient.invalidateQueries(selfDataKey);
-    queryClient.invalidateQueries(getFilesKey);
     navigate('Login');
   };
 

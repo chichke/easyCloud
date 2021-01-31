@@ -95,7 +95,7 @@ export const getFiles = () => {
   const { uid } = firebase.auth().currentUser;
 
   const listRef = firebase.storage().ref(`users/${uid}/`);
-  store.dispatch(resetFiles);
+  store.dispatch(resetFiles());
 
   return new Promise((resolve, reject) => {
     listRef
