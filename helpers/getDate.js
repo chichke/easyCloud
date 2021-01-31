@@ -1,8 +1,13 @@
 import * as Localization from 'expo-localization';
-import moment from 'moment';
 import 'moment-timezone';
 import 'moment/min/locales';
+import moment from 'moment/min/moment-with-locales';
 
-const getDate = (date) => moment(date).locale(Localization.locale).fromNow();
+function getLocale() {
+  const { locale } = Localization;
+  if (locale.indexOf('-') === -1) return locale;
+  return locale.substr(0, locale.indexOf('-'));
+}
+const getDate = (date) => moment(date).locale(getLocale()).fromNow();
 
 export default getDate;
