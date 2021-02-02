@@ -40,11 +40,16 @@ export default function ButtonWithText(props) {
 
   return (
     <TouchableOpacity
+      testID="button"
       style={[styles.container, disabled ? styles.disabled : undefined, style]}
       onPress={onPress}
       disabled={disabled}
     >
-      {title && <Text style={[styles.text, styleText]}>{title}</Text>}
+      {title && (
+        <Text style={[styles.text, styleText]} testID="title">
+          {title}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 }
